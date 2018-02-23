@@ -2,7 +2,15 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/entropy_poll.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/aesni.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sha512.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ctr_drbg.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/timing.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/aes.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/entropy.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/platform.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
