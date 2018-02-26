@@ -2,18 +2,15 @@
 #include <fstream>
 #include <string.h>
 
-#include "mbedtls/entropy.h"        //for denerating an aes key
+#include "mbedtls/entropy.h"        //for generating an aes key
 #include "mbedtls/ctr_drbg.h"
 #include "mbedtls/aes.h"            //for aes encryption
+#include "mbedtls/sha512.h"
 
 /**
  * void gen_aes_key(unsigned char *key)
  * @param key - 32 byte key will be generate
  */
-unsigned char KEY_GLOB_ENC[32];
-unsigned char IV_GLOB_ENC[16];
-
-
 size_t get_infile_length(std::ifstream *input_file) {
 	std::streampos begin,end;;
 	begin = input_file->tellg();
@@ -58,12 +55,38 @@ void gen_aes_key(unsigned char *key){
 
 void aes_encryption(unsigned char *key, std::ifstream *input_file, std::ofstream *output_file){
 	mbedtls_aes_context aes;
+	mbedtls_sha512_context sha;
 	unsigned char iv[16]= {0xb2, 0x4b, 0xf2, 0xf7, 0x7a, 0xc5, 0xec, 0x0c, 0x5e, 0x1f, 0x4d, 0xc1, 0xae, 0x46, 0x5e, 0x75};; //TODO - naplnit IV nahodnymi daty
-	unsigned char input[16];
+/*	unsigned char input[16];
 	unsigned char output[16];
 	char buffer[33];
+ */
 	size_t input_len = get_infile_length(input_file);
-	size_t output_len = 0;
+//	size_t output_len = 0;
+	int pom = (input_len/16+1)*16;
+	unsigned char input[pom+1];
+	unsigned char output[pom+1];
+	unsigned char output_hash[64];
+	char buffer[pom+1];
+
+
+	(*input_file).read(buffer,input_len);
+	std::copy(buffer,buffer+input_len,input);
+
+	mbedtls_sha512_init(&sha);
+	mbedtls_sha512(input,input_len,output_hash,0);
+
+	std::ofstream hash_file;
+	hash_file.open("hash_file",std::ios::binary);
+	std::copy(output_hash,output_hash+64,buffer);
+	hash_file.write(buffer,64);
+	hash_file.close();
+
+
+	unsigned char add = (unsigned char) pom-input_len;
+	for (unsigned int i = input_len; i <pom; i++) {
+		input[i]=add;
+	}
 
 	//generating and setting the key for encryption
 	 gen_aes_key(key);
@@ -73,20 +96,21 @@ void aes_encryption(unsigned char *key, std::ifstream *input_file, std::ofstream
 	 };
 
 	std::ofstream key_file;
-	key_file.open("key_file");
+	key_file.open("key_file",std::ios::binary);
 	std::copy(key,key+32,buffer);
-	std::copy(key,key+32,KEY_GLOB_ENC);
 	key_file.write(buffer,32);
 	key_file.close();
 
 	std::ofstream iv_file;
-	iv_file.open("iv_file");
+	iv_file.open("iv_file",std::ios::binary);
 	std::copy(iv,iv+16,buffer);
-	std::copy(iv,iv+16,IV_GLOB_ENC);
 	iv_file.write(buffer,16);
 	iv_file.close();
 
-
+	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_ENCRYPT, pom, iv, input, output );
+	std::copy(output,output+pom,buffer);
+	output_file->write(buffer,pom);
+/*
 	 while(input_len >= 16) {
 		 (*input_file).get(buffer,17); //TODO jak z toho udelat unsigned char??
 		 std::copy(buffer,buffer+16,input);
@@ -109,31 +133,39 @@ void aes_encryption(unsigned char *key, std::ifstream *input_file, std::ofstream
 		 output_file->write(buffer,16);
 		 input_len -= 16;
 		 output_len += 16;
-	 }
+	 }*/
 //TODO nejsou tu i nejake uzaviraci aes funkce...?
+	mbedtls_sha512_free(&sha);
+	mbedtls_aes_free(&aes);
 }
 
 void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_context aes;
+	mbedtls_sha512_context sha;
 	unsigned char key[32];
 	unsigned char iv[16];
-	unsigned char input[16];
+/*	unsigned char input[16];
 	unsigned char output[16];
 	char buffer[33];
+*/
 	size_t input_len = get_infile_length(enc_file);
-	size_t output_len = 0;
-	char buffer2[17];
+	unsigned char input[input_len];
+	unsigned char output[input_len];
+	char buffer[input_len+1];
+	size_t output_len = input_len;
+	unsigned char output_hash[64];
+//	char buffer2[17];
 
 	std::ifstream key_file; //TODO kontrola existence souboru a nenulovosti
-	key_file.open("key_file");
-	key_file.get(buffer,33);
+	key_file.open("key_file",std::ios::binary);
+	key_file.read(buffer,32);
 	std::copy(buffer,buffer+32,key);
 	key_file.close();
 
 	std::ifstream iv_file;
-	iv_file.open("iv_file");
-	iv_file.get(buffer2,17);
-	std::copy(buffer2, buffer2+16,iv);
+	iv_file.open("iv_file",std::ios::binary);
+	iv_file.read(buffer,16);
+	std::copy(buffer, buffer+16,iv);
 	iv_file.close();
 
 	mbedtls_aes_init(&aes);
@@ -141,8 +173,31 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 		std::cout << "key set NOK" << std::endl;
 	};
 	std::cout << "\nDecryption:\n";
+	enc_file->read(buffer,input_len);
+	std::copy(buffer,buffer+input_len,input);
+	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_DECRYPT, input_len, iv, input, output );
+	std::copy(output,output+input_len,buffer);
+	dec_file->write(buffer,input_len);
+
+	unsigned int may_added = (unsigned int) output[input_len-1];
+	bool was_added = true;
+	for (unsigned int i = 1; i<= may_added; i++) {
+		if (output[input_len-1]!=output[input_len-i]) {
+			was_added = false;
+		}
+	}
+
+	if (was_added) {
+		std::copy(output,output+input_len-may_added,buffer);
+		dec_file->write(buffer,input_len-may_added);
+	} else {
+		std::copy(output,output+input_len,buffer);
+		dec_file->write(buffer,input_len);
+	}
+
+/*
 	while(input_len > 16) {
-		enc_file->get(buffer2,17);
+		enc_file->get(buffer,17);
 		std::copy(buffer2,buffer2+16,input);
 		mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_DECRYPT, 16, iv, input, output );
 		std::copy(output,output+16,buffer2);
@@ -173,6 +228,24 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 
 		std::cout << "output:" << buffer2 << std::endl;
 	}
+ */
+	mbedtls_sha512_init(&sha);
+	mbedtls_sha512(output,output_len-may_added,output_hash,0);  //TODO dodelat hashovani, kontrolu hashe, jestli jsou stejne, promennou pro ulozeni hashe...
+
+	std::ifstream hash_file;
+	hash_file.open("hash_file");
+	char hash_buffer[65];
+	unsigned char hash_to_check[64];
+	hash_file.read(hash_buffer,64);
+	std::copy(hash_buffer,hash_buffer+64,hash_to_check);
+	if(memcmp(output_hash,hash_to_check,64)) {
+		std::cout << "Hash is NOK." << std::endl;
+	} else {
+		std::cout << "Hash is OK." << std::endl;
+	}
+
+	mbedtls_sha512_free(&sha);
+	mbedtls_aes_free(&aes);
 }
 
 
@@ -181,8 +254,8 @@ int main() {
 
 	std::ifstream in_file;
 	std::ofstream out_file;
-	in_file.open("input_file.txt");
-	out_file.open("output_file.txt");
+	in_file.open("input_file.txt",std::ios::binary);
+	out_file.open("output_file.txt",std::ios::binary);
 
 	std::string puvodni_input;
 
@@ -190,8 +263,8 @@ int main() {
 	in_file.close();
 	out_file.close();
 
-	in_file.open("output_file.txt");
-	out_file.open("new_input_file.txt");
+	in_file.open("output_file.txt",std::ios::binary);
+	out_file.open("new_input_file.txt",std::ios::binary);
 
 	aes_decryption(&in_file,&out_file);
 
