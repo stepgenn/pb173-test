@@ -4,8 +4,8 @@
 
 #include "mbedtls/entropy.h"
 #include "mbedtls/ctr_drbg.h"
-#include "mbedtls/aes.h"
-#include "mbedtls/sha512.h"
+//#include "mbedtls/aes.h"
+//#include "mbedtls/sha512.h"
 
 
 /**
@@ -164,7 +164,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	unsigned char output_hash[64];
 
 
-	std::ifstream key_file; //TODO kontrola existence souboru a nenulovosti
+	std::ifstream key_file;
 	key_file.open("key_file",std::ios::binary);
 	if (key_file.is_open()) {
 		key_file.read(buffer,32);
