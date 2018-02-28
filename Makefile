@@ -1,6 +1,7 @@
 # Variable settings
 #CXXFLAGS=-Wall -Wextra 
-SOURCES_MAIN=main.cpp
+SOURCES_GEN=func.cpp
+SOURCES_MAIN=$(SOURCES_GEN) main.cpp 
 SOURCES_CFILE=aesni.c ctr_drbg.c entropy.c entropy_poll.c platform.c timing.c aes.c sha512.c
 
 

@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
-    </list>
+    <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="" />
     <ignored path="pb173-test.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -455,7 +453,7 @@
       <workItem from="1519475349118" duration="18305000" />
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
-      <workItem from="1519834962283" duration="12888000" />
+      <workItem from="1519834962283" duration="13482000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -538,7 +536,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75619000" />
+    <option name="totallyTimeSpent" value="76213000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
