@@ -5,4 +5,4 @@ compiler:
   - gcc
   - clang
 
-script: make all test
+script: make
