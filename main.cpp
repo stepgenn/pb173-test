@@ -239,7 +239,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 }
 
 
-int main2() {
+int main() {
 
 	std::cout << "What do you want to do?" << std::endl;
 	std::cout << "1) Encrypt and hash supplied file, write into out file.\n";
