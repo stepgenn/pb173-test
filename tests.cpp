@@ -12,3 +12,7 @@ TEST_CASE("Hello word","hello") {
 	CHECK(1==1);
 }
 
+TEST_CASE("Hello word","hello2") {
+	CHECK(1==0);
+}
+
