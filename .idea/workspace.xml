@@ -12,11 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pb173_test.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pb173_test.dir/CXX.includecache" />
       <change beforePath="$PROJECT_DIR$/ctr_drbg.c" afterPath="$PROJECT_DIR$/ctr_drbg.c" />
       <change beforePath="$PROJECT_DIR$/entropy.c" afterPath="$PROJECT_DIR$/entropy.c" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="pb173-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +36,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.70477384">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="352">
@@ -75,8 +72,8 @@
           <file leaf-file-name="ctr_drbg.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ctr_drbg.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="589" column="47" lean-forward="false" selection-start-line="589" selection-start-column="47" selection-end-line="589" selection-end-column="47" />
+                <state relative-caret-position="189">
+                  <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
                   <folding>
                     <element signature="e#983#995#0" expanded="true" />
                   </folding>
@@ -84,11 +81,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="entropy.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="entropy.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/entropy.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="132">
-                  <caret line="63" column="50" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+                  <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -130,6 +127,7 @@
       <find>TEST_CASE</find>
       <find>mbedtls_aes_setkey_dec</find>
       <find>ctr_drbg_self_test_entropy</find>
+      <find>volatila</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,8 +142,8 @@
         <option value="$PROJECT_DIR$/tests.cpp" />
         <option value="$PROJECT_DIR$/mbedtls/ctr_drbg.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/ctr_drbg.c" />
         <option value="$PROJECT_DIR$/entropy.c" />
+        <option value="$PROJECT_DIR$/ctr_drbg.c" />
       </list>
     </option>
   </component>
@@ -415,7 +413,7 @@
       <workItem from="1519475349118" duration="18305000" />
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
-      <workItem from="1519834962283" duration="9679000" />
+      <workItem from="1519834962283" duration="11030000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -498,7 +496,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72410000" />
+    <option name="totallyTimeSpent" value="73761000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,10 +509,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1328976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32395834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32395834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -935,14 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="104" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mbedtls/ctr_drbg.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -962,20 +953,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/entropy.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ctr_drbg.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="589" column="47" lean-forward="false" selection-start-line="589" selection-start-column="47" selection-end-line="589" selection-end-column="47" />
+        <state relative-caret-position="189">
+          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
             <element signature="e#983#995#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entropy.c">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="63" column="50" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+        <state relative-caret-position="352">
+          <caret line="16" column="104" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="104" />
           <folding />
         </state>
       </provider>
