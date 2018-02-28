@@ -187,7 +187,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	}
 
 	mbedtls_aes_init(&aes);
-	if (!mbedtls_aes_setkey_dec( &aes, key, 256 )) {
+	if (mbedtls_aes_setkey_dec( &aes, key, 256 )) {
 		std::cout << "key set NOK" << std::endl;
 		return;
 	};
@@ -239,7 +239,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 }
 
 
-int main() {
+int main2() {
 
 	std::cout << "What do you want to do?" << std::endl;
 	std::cout << "1) Encrypt and hash supplied file, write into out file.\n";
