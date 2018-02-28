@@ -187,7 +187,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	}
 
 	mbedtls_aes_init(&aes);
-	if (!mbedtls_aes_setkey_dec( &aes, key, 256 )==0) {
+	if (!mbedtls_aes_setkey_dec( &aes, key, 256 )) {
 		std::cout << "key set NOK" << std::endl;
 		return;
 	};
