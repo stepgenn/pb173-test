@@ -81,9 +81,33 @@ CMakeFiles/pb173_test.dir/main.cpp.o.provides: CMakeFiles/pb173_test.dir/main.cp
 CMakeFiles/pb173_test.dir/main.cpp.o.provides.build: CMakeFiles/pb173_test.dir/main.cpp.o
 
 
+CMakeFiles/pb173_test.dir/func.cpp.o: CMakeFiles/pb173_test.dir/flags.make
+CMakeFiles/pb173_test.dir/func.cpp.o: ../func.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pb173_test.dir/func.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pb173_test.dir/func.cpp.o -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.cpp
+
+CMakeFiles/pb173_test.dir/func.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pb173_test.dir/func.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.cpp > CMakeFiles/pb173_test.dir/func.cpp.i
+
+CMakeFiles/pb173_test.dir/func.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pb173_test.dir/func.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.cpp -o CMakeFiles/pb173_test.dir/func.cpp.s
+
+CMakeFiles/pb173_test.dir/func.cpp.o.requires:
+
+.PHONY : CMakeFiles/pb173_test.dir/func.cpp.o.requires
+
+CMakeFiles/pb173_test.dir/func.cpp.o.provides: CMakeFiles/pb173_test.dir/func.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pb173_test.dir/build.make CMakeFiles/pb173_test.dir/func.cpp.o.provides.build
+.PHONY : CMakeFiles/pb173_test.dir/func.cpp.o.provides
+
+CMakeFiles/pb173_test.dir/func.cpp.o.provides.build: CMakeFiles/pb173_test.dir/func.cpp.o
+
+
 CMakeFiles/pb173_test.dir/aes.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/aes.c.o: ../aes.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/pb173_test.dir/aes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pb173_test.dir/aes.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/aes.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/aes.c
 
 CMakeFiles/pb173_test.dir/aes.c.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/pb173_test.dir/aes.c.o.provides.build: CMakeFiles/pb173_test.dir/aes.
 
 CMakeFiles/pb173_test.dir/aesni.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/aesni.c.o: ../aesni.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pb173_test.dir/aesni.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pb173_test.dir/aesni.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/aesni.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/aesni.c
 
 CMakeFiles/pb173_test.dir/aesni.c.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/pb173_test.dir/aesni.c.o.provides.build: CMakeFiles/pb173_test.dir/ae
 
 CMakeFiles/pb173_test.dir/ctr_drbg.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/ctr_drbg.c.o: ../ctr_drbg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pb173_test.dir/ctr_drbg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/pb173_test.dir/ctr_drbg.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/ctr_drbg.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/ctr_drbg.c
 
 CMakeFiles/pb173_test.dir/ctr_drbg.c.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/pb173_test.dir/ctr_drbg.c.o.provides.build: CMakeFiles/pb173_test.dir
 
 CMakeFiles/pb173_test.dir/entropy.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/entropy.c.o: ../entropy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/pb173_test.dir/entropy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/pb173_test.dir/entropy.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/entropy.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/entropy.c
 
 CMakeFiles/pb173_test.dir/entropy.c.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/pb173_test.dir/entropy.c.o.provides.build: CMakeFiles/pb173_test.dir/
 
 CMakeFiles/pb173_test.dir/entropy_poll.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/entropy_poll.c.o: ../entropy_poll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/pb173_test.dir/entropy_poll.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/pb173_test.dir/entropy_poll.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/entropy_poll.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/entropy_poll.c
 
 CMakeFiles/pb173_test.dir/entropy_poll.c.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/pb173_test.dir/entropy_poll.c.o.provides.build: CMakeFiles/pb173_test
 
 CMakeFiles/pb173_test.dir/platform.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/platform.c.o: ../platform.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/pb173_test.dir/platform.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/pb173_test.dir/platform.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/platform.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/platform.c
 
 CMakeFiles/pb173_test.dir/platform.c.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/pb173_test.dir/platform.c.o.provides.build: CMakeFiles/pb173_test.dir
 
 CMakeFiles/pb173_test.dir/sha512.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/sha512.c.o: ../sha512.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/pb173_test.dir/sha512.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/pb173_test.dir/sha512.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/sha512.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/sha512.c
 
 CMakeFiles/pb173_test.dir/sha512.c.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/pb173_test.dir/sha512.c.o.provides.build: CMakeFiles/pb173_test.dir/s
 
 CMakeFiles/pb173_test.dir/timing.c.o: CMakeFiles/pb173_test.dir/flags.make
 CMakeFiles/pb173_test.dir/timing.c.o: ../timing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/pb173_test.dir/timing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/pb173_test.dir/timing.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pb173_test.dir/timing.c.o   -c /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/timing.c
 
 CMakeFiles/pb173_test.dir/timing.c.i: cmake_force
@@ -276,6 +300,7 @@ CMakeFiles/pb173_test.dir/timing.c.o.provides.build: CMakeFiles/pb173_test.dir/t
 # Object files for target pb173_test
 pb173_test_OBJECTS = \
 "CMakeFiles/pb173_test.dir/main.cpp.o" \
+"CMakeFiles/pb173_test.dir/func.cpp.o" \
 "CMakeFiles/pb173_test.dir/aes.c.o" \
 "CMakeFiles/pb173_test.dir/aesni.c.o" \
 "CMakeFiles/pb173_test.dir/ctr_drbg.c.o" \
@@ -289,6 +314,7 @@ pb173_test_OBJECTS = \
 pb173_test_EXTERNAL_OBJECTS =
 
 pb173_test.exe: CMakeFiles/pb173_test.dir/main.cpp.o
+pb173_test.exe: CMakeFiles/pb173_test.dir/func.cpp.o
 pb173_test.exe: CMakeFiles/pb173_test.dir/aes.c.o
 pb173_test.exe: CMakeFiles/pb173_test.dir/aesni.c.o
 pb173_test.exe: CMakeFiles/pb173_test.dir/ctr_drbg.c.o
@@ -299,7 +325,7 @@ pb173_test.exe: CMakeFiles/pb173_test.dir/sha512.c.o
 pb173_test.exe: CMakeFiles/pb173_test.dir/timing.c.o
 pb173_test.exe: CMakeFiles/pb173_test.dir/build.make
 pb173_test.exe: CMakeFiles/pb173_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable pb173_test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable pb173_test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pb173_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -308,6 +334,7 @@ CMakeFiles/pb173_test.dir/build: pb173_test.exe
 .PHONY : CMakeFiles/pb173_test.dir/build
 
 CMakeFiles/pb173_test.dir/requires: CMakeFiles/pb173_test.dir/main.cpp.o.requires
+CMakeFiles/pb173_test.dir/requires: CMakeFiles/pb173_test.dir/func.cpp.o.requires
 CMakeFiles/pb173_test.dir/requires: CMakeFiles/pb173_test.dir/aes.c.o.requires
 CMakeFiles/pb173_test.dir/requires: CMakeFiles/pb173_test.dir/aesni.c.o.requires
 CMakeFiles/pb173_test.dir/requires: CMakeFiles/pb173_test.dir/ctr_drbg.c.o.requires

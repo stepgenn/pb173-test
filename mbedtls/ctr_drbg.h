@@ -30,9 +30,6 @@
 #ifndef MBEDTLS_CTR_DRBG_H
 #define MBEDTLS_CTR_DRBG_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #include "aes.h"
 
@@ -328,8 +325,4 @@ int mbedtls_ctr_drbg_seed_entropy_len( mbedtls_ctr_drbg_context *,
 #endif /* ctr_drbg.h */
 
 int factorial(int n);
-
-#ifdef __cplusplus
-}
-#endif
 

@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.cpp
+func.hpp
+/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.hpp
+
+/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.hpp
+iostream
+-
+fstream
+-
+cstring
+-
+mbedtls/entropy.h
+/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/mbedtls/entropy.h
+mbedtls/ctr_drbg.h
+/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/mbedtls/ctr_drbg.h
+
 /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/main.cpp
 iostream
 -
@@ -17,6 +33,8 @@ mbedtls/entropy.h
 /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/mbedtls/entropy.h
 mbedtls/ctr_drbg.h
 /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/mbedtls/ctr_drbg.h
+func.hpp
+/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.hpp
 
 /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/mbedtls/aes.h
 config.h

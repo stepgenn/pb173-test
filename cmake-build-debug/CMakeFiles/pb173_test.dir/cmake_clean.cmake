@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pb173_test.dir/main.cpp.o"
+  "CMakeFiles/pb173_test.dir/func.cpp.o"
   "CMakeFiles/pb173_test.dir/aes.c.o"
   "CMakeFiles/pb173_test.dir/aesni.c.o"
   "CMakeFiles/pb173_test.dir/ctr_drbg.c.o"

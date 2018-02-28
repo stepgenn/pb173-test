@@ -95,6 +95,12 @@
 		<Unit filename="/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/entropy_poll.c">
 			<Option target="pb173_test"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.cpp">
+			<Option target="pb173_test"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/func.hpp">
+			<Option target="pb173_test"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/main.cpp">
 			<Option target="pb173_test"/>
 		</Unit>
