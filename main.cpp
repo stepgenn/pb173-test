@@ -123,7 +123,7 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	}
 
 	mbedtls_aes_init(&aes);
-	if (!mbedtls_aes_setkey_enc( &aes, key, 256 )==0) {
+	if (mbedtls_aes_setkey_enc( &aes, key, 256 )) {
 		std::cout << "key set NOK" << std::endl;
 		return;
 	};
@@ -256,7 +256,7 @@ int main() {
 		std::string file_name;
 		std::getline(std::cin,file_name);
 		std::getline(std::cin,file_name);
-		in_file.open(file_name,std::ios::binary);
+		in_file.open(file_name.c_str(),std::ios::binary);
 		out_file.open("output_file",std::ios::binary);
 		if (!(in_file.is_open() && out_file.is_open())) {
 			std::cout << "Some trouble with opening file." << std::endl;
@@ -272,7 +272,7 @@ int main() {
 		std::string file_name;
 		std::getline(std::cin,file_name);
 		std::getline(std::cin,file_name);
-		in_file.open(file_name,std::ios::binary);
+		in_file.open(file_name.c_str(),std::ios::binary);
 		out_file.open("decrypted_file",std::ios::binary);
 		if (!(in_file.is_open() && out_file.is_open())) {
 			std::cout << "Some trouble with opening file." << std::endl;
