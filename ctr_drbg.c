@@ -55,7 +55,7 @@ extern "C" {
 /* Implementation that should never be optimized out by the compiler */
 
 static void mbedtls_zeroize(void *v, size_t n) {
-    volatile unsigned char *p = v;
+    volatile unsigned char *p = (unsigned char *)v;
     while (n--) *p++ = 0;
 }
 
@@ -587,7 +587,7 @@ static size_t test_offset;
 static int ctr_drbg_self_test_entropy( void *data, unsigned char *buf,
                                        size_t len )
 {
-    const unsigned char *p = data;
+    const unsigned char *p = (unsigned char *) data;
     memcpy( buf, p + test_offset, len );
     test_offset += len;
     return( 0 );

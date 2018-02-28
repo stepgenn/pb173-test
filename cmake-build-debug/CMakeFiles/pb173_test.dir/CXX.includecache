@@ -11,7 +11,7 @@ iostream
 -
 fstream
 -
-string.h
+cstring
 -
 mbedtls/entropy.h
 /cygdrive/c/Users/sGenn/Documents/GitHub/pb173-test/mbedtls/entropy.h
