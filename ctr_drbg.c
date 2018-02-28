@@ -50,8 +50,11 @@
 #endif /* MBEDTLS_SELF_TEST */
 
 /* Implementation that should never be optimized out by the compiler */
-extern "C" static void mbedtls_zeroize( void *v, size_t n ) {
-    volatile unsigned char *p = v; while( n-- ) *p++ = 0;
+extern "C" {
+static void mbedtls_zeroize(void *v, size_t n) {
+    volatile unsigned char *p = v;
+    while (n--) *p++ = 0;
+}
 }
 
 /*
