@@ -23,6 +23,9 @@
  *
  *  http://csrc.nist.gov/publications/nistpubs/800-90/SP800-90revised_March2007.pdf
  */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #if !defined(MBEDTLS_CONFIG_FILE)
 #include "mbedtls/config.h"
@@ -584,7 +587,7 @@ static size_t test_offset;
 static int ctr_drbg_self_test_entropy( void *data, unsigned char *buf,
                                        size_t len )
 {
-    const unsigned char *p = static_cast<unsigned char *> data;
+    const unsigned char *p = data;
     memcpy( buf, p + test_offset, len );
     test_offset += len;
     return( 0 );
@@ -655,3 +658,7 @@ int mbedtls_ctr_drbg_self_test( int verbose )
 #endif /* MBEDTLS_SELF_TEST */
 
 #endif /* MBEDTLS_CTR_DRBG_C */
+
+#ifdef __cplusplus
+}
+#endif
