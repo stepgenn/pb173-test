@@ -12,8 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+      <change beforePath="$PROJECT_DIR$/ctr_drbg.c" afterPath="$PROJECT_DIR$/ctr_drbg.c" />
     </list>
     <ignored path="pb173-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +32,7 @@
     <favorites_list name="pb173-test" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.54661655">
+    <splitter split-orientation="horizontal" split-proportion="0.70477384">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
@@ -46,10 +45,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
+                <state relative-caret-position="88">
                   <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
@@ -58,14 +57,22 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests.cpp">
+          <file leaf-file-name="ctr_drbg.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mbedtls/ctr_drbg.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#2#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="231">
+                  <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ctr_drbg.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ctr_drbg.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="174">
+                  <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -118,6 +125,7 @@
         <option value="$PROJECT_DIR$/../main.cpp" />
         <option value="$PROJECT_DIR$/tests.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/ctr_drbg.c" />
       </list>
     </option>
   </component>
@@ -127,7 +135,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="932" />
     <option name="y" value="15" />
     <option name="width" value="889" />
@@ -387,7 +395,7 @@
       <workItem from="1519475349118" duration="18305000" />
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
-      <workItem from="1519834962283" duration="5541000" />
+      <workItem from="1519834962283" duration="6282000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -449,7 +457,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68272000" />
+    <option name="totallyTimeSpent" value="69013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,7 +469,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1328976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -535,14 +543,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/timing.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mbedtls/entropy_poll.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
@@ -725,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ctr_drbg.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mbedtls/sha512.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -893,9 +886,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -925,11 +916,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="88">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mbedtls/ctr_drbg.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ctr_drbg.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
