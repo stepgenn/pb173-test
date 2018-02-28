@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
-#include <string.h>
+#include <cstring>
 
+extern "C" {
 #include "mbedtls/entropy.h"
 #include "mbedtls/ctr_drbg.h"
 //#include "mbedtls/aes.h"
 //#include "mbedtls/sha512.h"
-
+}
 
 /**
  * size_t get_infile_length(std::ifstream *input_file)
