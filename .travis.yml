@@ -1,6 +1,5 @@
 # TravisCI build setting file
 language: cpp
 compiler:
-	-gcc
-	-clang
+	-gcc -clang
 script: make all test
