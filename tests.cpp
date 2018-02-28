@@ -2,7 +2,7 @@
 // Created by sGenn on 28.02.2018.
 //
 
-#include "main.cpp"
+//#include "main.cpp"
 #define CATCH_CONFIG_MAIN
 
 #include "catch.hpp"

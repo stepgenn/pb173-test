@@ -12,8 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ctr_drbg.c" afterPath="$PROJECT_DIR$/ctr_drbg.c" />
-      <change beforePath="$PROJECT_DIR$/entropy.c" afterPath="$PROJECT_DIR$/entropy.c" />
+      <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
     </list>
     <ignored path="pb173-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +35,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.70477384">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="352">
                   <caret line="16" column="104" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="104" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="88">
+                  <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -139,11 +148,11 @@
         <option value="$PROJECT_DIR$/mbedtls/platform.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/../main.cpp" />
-        <option value="$PROJECT_DIR$/tests.cpp" />
         <option value="$PROJECT_DIR$/mbedtls/ctr_drbg.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/entropy.c" />
         <option value="$PROJECT_DIR$/ctr_drbg.c" />
+        <option value="$PROJECT_DIR$/tests.cpp" />
       </list>
     </option>
   </component>
@@ -153,7 +162,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="932" />
     <option name="y" value="15" />
     <option name="width" value="889" />
@@ -413,7 +422,7 @@
       <workItem from="1519475349118" duration="18305000" />
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
-      <workItem from="1519834962283" duration="11030000" />
+      <workItem from="1519834962283" duration="11523000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -496,7 +505,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73761000" />
+    <option name="totallyTimeSpent" value="74254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,7 +517,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1328976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -910,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../git-ci-demo/src/fact.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -975,6 +976,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="104" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
