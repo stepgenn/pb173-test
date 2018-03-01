@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/func.cpp" afterPath="$PROJECT_DIR$/func.cpp" />
       <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
     </list>
     <ignored path="pb173-test.iws" />
@@ -52,8 +51,8 @@
               <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="267">
-                      <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="24" />
+                    <state relative-caret-position="399">
+                      <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
                       <folding>
                         <element signature="e#223#835#0" expanded="false" />
                       </folding>
@@ -479,7 +478,7 @@
       <workItem from="1519475349118" duration="18305000" />
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
-      <workItem from="1519834962283" duration="17871000" />
+      <workItem from="1519834962283" duration="18053000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -607,11 +606,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519898233026</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="write_in_file tests">
+      <created>1519899840798</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1519899840798</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80602000" />
+    <option name="totallyTimeSpent" value="80784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -695,7 +701,8 @@
     <MESSAGE value="one test for get_infile_length - change to strlen" />
     <MESSAGE value="one test for get_infile_length" />
     <MESSAGE value="another one test for get_infile_length" />
-    <option name="LAST_COMMIT_MESSAGE" value="another one test for get_infile_length" />
+    <MESSAGE value="write_in_file tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="write_in_file tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1097,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="24" />
+        <state relative-caret-position="399">
+          <caret line="51" column="38" lean-forward="false" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
           <folding>
             <element signature="e#223#835#0" expanded="false" />
           </folding>

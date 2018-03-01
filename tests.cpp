@@ -41,13 +41,15 @@ TEST_CASE("get_infile_length","function test") {
 }
 
 TEST_CASE("write_in_file","function test") {
-	CHECK(!write_in_file(".",1,"."));
+
 
 	char char_string[] = "some random string";
 	unsigned int len = strlen(char_string);
 	unsigned char string[len];
 	memcpy(string,char_string,len);
 	write_in_file(string,len,"out_file");
+
+	CHECK(!write_in_file(string,1,"."));
 
 	std::ifstream out_file;
 	out_file.open("out_file",std::ios::binary);
