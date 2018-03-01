@@ -17,12 +17,12 @@ TEST_CASE("get_infile_length","function test") {
 	std::ofstream test_file;
 	test_file.open("test_file",std::ios::binary);
 	char string[]="This will be written in file.";
-	test_file.write(string,string.size());
+	test_file.write(string,strlen(string));
 	test_file.close();
 
 	std::ifstream input_file;
 	input_file.open("test_file");
-	size_t size1 = string.size();
+	size_t size1 = strlen(string);
 	size_t size2 = get_infile_length(input_file);
 	CHECK(size1 == size2);
 }
