@@ -194,7 +194,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_DECRYPT, input_len, iv, input, output );
 
 
-	auto may_added = (unsigned int) output[input_len-1];
+	unsigned int may_added = (unsigned int) output[input_len-1];
 	bool was_added = true;
 	for (unsigned int i = 1; i<= may_added; i++) {
 		if (output[input_len-1]!=output[input_len-i]) {
