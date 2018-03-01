@@ -28,6 +28,7 @@ TEST_CASE("get_infile_length","function test") {
 	input_file.open("some_random_name_for_file");
 
 	CHECK(size1 == size2);
-	CHECK(get_infile_length(input_file)==0);
+	CHECK(get_infile_length(&input_file)==0);
+	input_file.close();
 }
 
