@@ -54,6 +54,11 @@ TEST_CASE("write_in_file","function test") {
 	std::ifstream out_file;
 	out_file.open("out_file",std::ios::binary);
 	CHECK(out_file.is_open());
+	CHECK(len == get_infile_length(&out_file));
+
+	char buffer[len];
+	out_file.read(buffer,len);
+	CHECK(memcmp(buffer,char_string,len)==0);
 
 	out_file.close();
 }
