@@ -11,6 +11,7 @@
  */
 size_t get_infile_length(std::ifstream *input_file) {
 	std::streampos begin,end;
+	input_file->seekg(0,input_file->beg);
 	begin = input_file->tellg();
 	input_file->seekg (0, input_file->end);
 	end = input_file->tellg();
@@ -193,7 +194,7 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_DECRYPT, input_len, iv, input, output );
 
 
-	unsigned int may_added = (unsigned int) output[input_len-1];
+	auto may_added = (unsigned int) output[input_len-1];
 	bool was_added = true;
 	for (unsigned int i = 1; i<= may_added; i++) {
 		if (output[input_len-1]!=output[input_len-i]) {

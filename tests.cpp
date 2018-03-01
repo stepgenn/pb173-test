@@ -24,10 +24,18 @@ TEST_CASE("get_infile_length","function test") {
 	input_file.open("test_file");
 	size_t size1 = strlen(string);
 	size_t size2 = get_infile_length(&input_file);
+
+	char c;
+	for(int i=0; i<=3; i++)
+		input_file.get(c);
+
+	size_t size3 = get_infile_length(&input_file);
+
 	input_file.close();
 	input_file.open("some_random_name_for_file");
 
 	CHECK(size1 == size2);
+	CHECK(size2 == size3);
 	CHECK(get_infile_length(&input_file)==0);
 	input_file.close();
 }
