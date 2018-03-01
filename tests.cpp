@@ -23,7 +23,7 @@ TEST_CASE("get_infile_length","function test") {
 	std::ifstream input_file;
 	input_file.open("test_file");
 	size_t size1 = strlen(string);
-	size_t size2 = get_infile_length(input_file);
+	size_t size2 = get_infile_length(&input_file);
 	CHECK(size1 == size2);
 }
 

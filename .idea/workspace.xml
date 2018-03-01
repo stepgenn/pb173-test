@@ -49,8 +49,8 @@
           <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+                <state relative-caret-position="463">
+                  <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -456,7 +456,7 @@
       <workItem from="1519475349118" duration="18305000" />
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
-      <workItem from="1519834962283" duration="14752000" />
+      <workItem from="1519834962283" duration="14817000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -549,11 +549,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519896517988</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="one test for get_infile_length - change to strlen">
+      <created>1519896636469</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1519896636469</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77483000" />
+    <option name="totallyTimeSpent" value="77548000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,7 +641,8 @@
     <MESSAGE value="extern c in main" />
     <MESSAGE value="retyping in ctr_drbg.c and entropy.c" />
     <MESSAGE value="onet test for get_infile_length" />
-    <option name="LAST_COMMIT_MESSAGE" value="onet test for get_infile_length" />
+    <MESSAGE value="one test for get_infile_length - change to strlen" />
+    <option name="LAST_COMMIT_MESSAGE" value="one test for get_infile_length - change to strlen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="463">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding />
         </state>
       </provider>
