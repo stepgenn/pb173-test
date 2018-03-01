@@ -9,7 +9,7 @@
 #include "catch.hpp"
 
 TEST_CASE("Hello word","hello") {
-	CHECK(1==1);
+	CHECK(true);
 	CHECK(1!=0);
 }
 
@@ -22,6 +22,8 @@ TEST_CASE("get_infile_length","function test") {
 
 	std::ifstream input_file;
 	input_file.open("test_file");
-	CHECK(string.size() == get_infile_length(input_file));
+	size_t size1 = string.size();
+	size_t size2 = get_infile_length(input_file);
+	CHECK(size1 == size2);
 }
 
