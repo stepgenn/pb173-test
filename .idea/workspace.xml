@@ -50,9 +50,9 @@
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="242">
-                  <caret line="25" column="166" lean-forward="false" selection-start-line="25" selection-start-column="166" selection-end-line="25" selection-end-column="166" />
+                  <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
                   <folding>
-                    <element signature="e#2050#2542#0" expanded="false" />
+                    <element signature="e#2077#2569#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -468,7 +468,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="7783000" />
+      <workItem from="1520271858886" duration="7973000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -687,11 +687,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520282458040</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="test of hash function 4">
+      <created>1520282595540</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1520282595540</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89487000" />
+    <option name="totallyTimeSpent" value="89677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1181,9 +1188,9 @@
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="25" column="166" lean-forward="false" selection-start-line="25" selection-start-column="166" selection-end-line="25" selection-end-column="166" />
+          <caret line="25" column="53" lean-forward="false" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
           <folding>
-            <element signature="e#2050#2542#0" expanded="false" />
+            <element signature="e#2077#2569#0" expanded="false" />
           </folding>
         </state>
       </provider>
