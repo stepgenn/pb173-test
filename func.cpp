@@ -76,7 +76,7 @@ bool gen_aes_key(unsigned char *key, unsigned int length){
 
 	return true;
 }
-
+/*
 bool gen_and_set_enc(mbedtls_aes_context*aes) {
 	unsigned char iv[16];
 	unsigned char key[32];
@@ -86,7 +86,7 @@ bool gen_and_set_enc(mbedtls_aes_context*aes) {
 bool aes_encryption(std::ifstream *infile, std::ofstream outfile, mbedtls_aes_context *aes){
 	//TODO work with files, encryption with aes
 }
-
+*/
 //TODO mozna predelat na void
 void hash_input(unsigned char* input, size_t input_len){
 	mbedtls_sha512_context sha;
@@ -97,7 +97,7 @@ void hash_input(unsigned char* input, size_t input_len){
 	mbedtls_sha512_free(&sha);
 }
 
-
+/*
 void encryption(char *infile_name) {
 	//TODO otevirani souboru a volani funkci ostatnich
 
@@ -105,7 +105,7 @@ void encryption(char *infile_name) {
 
 
 
-
+*/
 
 /**
  *void aes_encryption(std::ifstream *input_file, std::ofstream *output_file)

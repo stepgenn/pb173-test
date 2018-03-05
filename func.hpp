@@ -49,6 +49,6 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file);
  * @param enc_file - encrypted file which will be decrypted
  * @param dec_file - file in which will be saved the decrypted enc_file
  */
-void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file);
+bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file);
 
 #endif //PB173_TEST_FUNC_HPP
