@@ -81,6 +81,6 @@ TEST_CASE("test everything","compare input and decrypted one"){
 
 	input.open("encrypted",std::ios::binary);
 	output.open("decrypted",std::ios::binary);
-	CHECK(aes_decryption(input,output));
+	CHECK(aes_decryption(&input,&output));
 }
 
