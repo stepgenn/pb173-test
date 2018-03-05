@@ -49,10 +49,10 @@
           <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+                <state relative-caret-position="220">
+                  <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
                   <folding>
-                    <element signature="e#2040#2532#0" expanded="false" />
+                    <element signature="e#2039#2531#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -468,7 +468,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="7263000" />
+      <workItem from="1520271858886" duration="7363000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -666,11 +666,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520281775203</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="test of hash function">
+      <created>1520282073730</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1520282073730</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88967000" />
+    <option name="totallyTimeSpent" value="89067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1158,10 +1165,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="220">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding>
-            <element signature="e#2040#2532#0" expanded="false" />
+            <element signature="e#2039#2531#0" expanded="false" />
           </folding>
         </state>
       </provider>
