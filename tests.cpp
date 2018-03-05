@@ -63,3 +63,24 @@ TEST_CASE("write_in_file","function test") {
 	out_file.close();
 }
 
+
+TEST_CASE("test everything","compare input and decrypted one"){
+	std::ofstream input2;
+	input2.open("input",std::ios::binary);
+	input2 << "Tohle bude testovaci soubor, tak snad to bude vsechno ok." << std::endl;
+	input2.close();
+
+	std::ifstream input;
+	std::ofstream output;
+	input.open("input",std::ios::binary);
+	output.open("encrypted",std::ios::binary);
+
+	aes_encryption(&input,&output);
+	input.close();
+	output.close();
+
+	input.open("encrypted",std::ios::binary);
+	output.open("decrypted",std::ios::binary);
+	CHECK(aes_decryption(input,output));
+}
+

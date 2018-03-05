@@ -77,6 +77,34 @@ bool gen_aes_key(unsigned char *key, unsigned int length){
 	return true;
 }
 
+bool gen_and_set_enc(mbedtls_aes_context*aes) {
+	unsigned char iv[16];
+	unsigned char key[32];
+	//TODO generate and save and set enerything to be ready for using encryption
+}
+
+bool aes_encryption(std::ifstream *infile, std::ofstream outfile, mbedtls_aes_context *aes){
+	//TODO work with files, encryption with aes
+}
+
+//TODO mozna predelat na void
+void hash_input(unsigned char* input, size_t input_len){
+	mbedtls_sha512_context sha;
+	unsigned char output_hash[64];
+	mbedtls_sha512_init(&sha);
+	mbedtls_sha512(input,input_len,output_hash,0);
+	write_in_file(output_hash,64,"hash_file");
+	mbedtls_sha512_free(&sha);
+}
+
+
+void encryption(char *infile_name) {
+	//TODO otevirani souboru a volani funkci ostatnich
+
+}
+
+
+
 
 
 /**
@@ -86,7 +114,7 @@ bool gen_aes_key(unsigned char *key, unsigned int length){
  */
 void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	mbedtls_aes_context aes;
-	mbedtls_sha512_context sha;
+//	mbedtls_sha512_context sha;
 	unsigned char iv[16];
 	unsigned char key[32];
 	size_t input_len = get_infile_length(input_file);
@@ -98,15 +126,17 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 
 	unsigned char input[pom+1];
 	unsigned char output[pom+1];
-	unsigned char output_hash[64];
+//	unsigned char output_hash[64];
 	char buffer[pom+1 < 32 ? 33 : pom +1];
 
-	(*input_file).read(buffer,input_len);
+	input_file->read(buffer,input_len);
 	std::copy(buffer,buffer+input_len,input);
 
-	mbedtls_sha512_init(&sha);
-	mbedtls_sha512(input,input_len,output_hash,0);
-	write_in_file(output_hash,64,"hash_file");
+	hash_input(input,input_len);
+
+//	mbedtls_sha512_init(&sha);
+//	mbedtls_sha512(input,input_len,output_hash,0);
+//	write_in_file(output_hash,64,"hash_file");
 
 	unsigned char add = (unsigned char) pom-input_len;
 	for (unsigned int i = input_len; i <pom; i++) {
@@ -136,7 +166,7 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	output_file->write(buffer,pom);
 
 
-	mbedtls_sha512_free(&sha);
+//	mbedtls_sha512_free(&sha);
 	mbedtls_aes_free(&aes);
 }
 
@@ -146,7 +176,7 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
  * @param enc_file - encrypted file which will be decrypted
  * @param dec_file - file in which will be saved the decrypted enc_file
  */
-void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
+bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_context aes;
 	mbedtls_sha512_context sha;
 	unsigned char key[32];
@@ -227,10 +257,15 @@ void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 
 	if(memcmp(output_hash,hash_to_check,64)) {
 		std::cout << "Hash is NOK." << std::endl;
+		mbedtls_sha512_free(&sha);
+		mbedtls_aes_free(&aes);
+		return false;
 	} else {
 		std::cout << "Hash is OK." << std::endl;
+		mbedtls_sha512_free(&sha);
+		mbedtls_aes_free(&aes);
+		return true;
 	}
 
-	mbedtls_sha512_free(&sha);
-	mbedtls_aes_free(&aes);
+
 }
