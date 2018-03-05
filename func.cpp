@@ -96,6 +96,7 @@ bool gen_and_set_aes_enc(mbedtls_aes_context *aes) {
 		std::cout << "Encryption ended without saving key and iv.";
 		return false;
 	}
+	return true;
 }
 
 /*
@@ -106,7 +107,7 @@ bool aes_encryption(std::ifstream *infile, std::ofstream outfile, mbedtls_aes_co
 //TODO mozna predelat na void
 void hash_input(unsigned char* input, size_t input_len){
 	mbedtls_sha512_context sha;
-	unsigned char output_hash[64];
+	unsigned char output_hash[64] ;
 	mbedtls_sha512_init(&sha);
 	mbedtls_sha512(input,input_len,output_hash,0);
 	write_in_file(output_hash,64,"hash_file");
@@ -153,8 +154,6 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	for (unsigned int i = input_len; i <pom; i++) {
 		input[i]=add;
 	}
-
-
 /*	if (!(gen_aes_key(iv,16) && gen_aes_key(key,32))) {
 		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
 		return;
