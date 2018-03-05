@@ -76,13 +76,29 @@ bool gen_aes_key(unsigned char *key, unsigned int length){
 
 	return true;
 }
-/*
-bool gen_and_set_enc(mbedtls_aes_context*aes) {
-	unsigned char iv[16];
+
+bool gen_and_set_aes_enc(mbedtls_aes_context *aes) {
 	unsigned char key[32];
-	//TODO generate and save and set enerything to be ready for using encryption
+
+	if (!gen_aes_key(key,32)) {
+		std::cout << "Error in generating random key, encryption ended without success." << std::endl;
+		return false;
+	}
+
+	mbedtls_aes_init(aes);
+	if (mbedtls_aes_setkey_enc(aes, key, 256 )) {
+		std::cout << "Key set NOK" << std::endl;
+		return false;
+	};
+
+
+	if (!write_in_file(key,32,"key_file")) {
+		std::cout << "Encryption ended without saving key and iv.";
+		return false;
+	}
 }
 
+/*
 bool aes_encryption(std::ifstream *infile, std::ofstream outfile, mbedtls_aes_context *aes){
 	//TODO work with files, encryption with aes
 }
@@ -116,7 +132,7 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	mbedtls_aes_context aes;
 //	mbedtls_sha512_context sha;
 	unsigned char iv[16];
-	unsigned char key[32];
+//	unsigned char key[32];
 	size_t input_len = get_infile_length(input_file);
 	if (input_len == 0) {
 		std::cout << "Size of input file is 0. Encryption was ended without success.";
@@ -144,7 +160,7 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	}
 
 
-	if (!(gen_aes_key(iv,16) && gen_aes_key(key,32))) {
+/*	if (!(gen_aes_key(iv,16) && gen_aes_key(key,32))) {
 		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
 		return;
 	}
@@ -159,7 +175,14 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	if (!(write_in_file(key,32,"key_file") && write_in_file(iv,16,"iv_file"))) {
 		std::cout << "Encryption ended without saving key and iv.";
 		return;
+	} */
+
+	if (!(gen_aes_key(iv,16))) {
+		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
+		return;
 	}
+
+	gen_and_set_aes_enc(&aes);
 
 	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_ENCRYPT, pom, iv, input, output );
 	std::copy(output,output+pom,buffer);

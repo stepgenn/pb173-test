@@ -13,6 +13,21 @@
 //#include "mbedtls/aes.h"
 //#include "mbedtls/sha512.h"
 
+
+/**
+ * hash_input - the function takes a pointer to string of unsigned char and int length and hash it and save the hash to a file
+ * @param input - input to be hash
+ * @param input_len - length of input
+ */
+void hash_input(unsigned char* input, size_t input_len);
+
+/**
+ * gen_and_set_aes_enc(mbedtls_aes_context *aes) - generate random key, save it to a file and set aes with key
+ * @param aes - context which should be set
+ * @return
+ */
+bool gen_and_set_aes_enc(mbedtls_aes_context *aes);
+
 /**
  * size_t get_infile_length(std::ifstream *input_file)
  * @param input_file
