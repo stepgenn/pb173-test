@@ -27,7 +27,7 @@ TEST_CASE("hash_input","tests_vectors") {
 	char get_from_file[64];
 	hash_file.open("hash_file",std::ios::binary);
 	hash_file.read(get_from_file,64);
-	CHECK(memcmp(get_from_file,output_hash_abc,64)==0);
+	CHECK(memcmp(get_from_file,(void *)output_hash_abc,64)==0);
 
 }
 
