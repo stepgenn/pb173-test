@@ -130,7 +130,6 @@ void encryption(char *infile_name) {
  */
 void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	mbedtls_aes_context aes;
-//	mbedtls_sha512_context sha;
 	unsigned char iv[16];
 //	unsigned char key[32];
 	size_t input_len = get_infile_length(input_file);
@@ -142,7 +141,6 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 
 	unsigned char input[pom+1];
 	unsigned char output[pom+1];
-//	unsigned char output_hash[64];
 	char buffer[pom+1 < 32 ? 33 : pom +1];
 
 	input_file->read(buffer,input_len);
@@ -150,9 +148,6 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 
 	hash_input(input,input_len);
 
-//	mbedtls_sha512_init(&sha);
-//	mbedtls_sha512(input,input_len,output_hash,0);
-//	write_in_file(output_hash,64,"hash_file");
 
 	unsigned char add = (unsigned char) pom-input_len;
 	for (unsigned int i = input_len; i <pom; i++) {
@@ -179,6 +174,10 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 
 	if (!(gen_aes_key(iv,16))) {
 		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
+		return;
+	}
+	if (!write_in_file(iv,16,"iv_file")) {
+		std::cout << "Encryption ended without saving key and iv.";
 		return;
 	}
 
