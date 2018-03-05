@@ -199,7 +199,7 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 		key_file.close();
 	} else {
 		std::cout << "Error in opening key_file. Decryption ended without success." << std::endl;
-		return;
+		return false;
 	}
 
 	std::ifstream iv_file;
@@ -210,13 +210,13 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 		iv_file.close();
 	} else {
 		std::cout << "Error in opening iv_file. Decryption ended without success." << std::endl;
-		return;
+		return false;
 	}
 
 	mbedtls_aes_init(&aes);
 	if (mbedtls_aes_setkey_dec( &aes, key, 256 )) {
 		std::cout << "key set NOK" << std::endl;
-		return;
+		return false;
 	};
 
 	enc_file->read(buffer,input_len);
@@ -248,7 +248,7 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	hash_file.open("hash_file");
 	if (!hash_file.is_open()) {
 		std::cout << "Error in opening hash_file to check hash." << std::endl;
-		return;
+		return false;
 	}
 	char hash_buffer[65];
 	unsigned char hash_to_check[64];
