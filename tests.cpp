@@ -23,7 +23,7 @@ TEST_CASE("hash_input","tests_vectors") {
 	unsigned char test_abc[strlen(test_abc_char)];
 	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
 	hash_input(test_abc,strlen(test_abc_char));
-	long int output_hash_abc = {0xddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f};
+	long long int output_hash_abc = 0xddaf35a193617abacc417349ae20413112e6fa4e89a97ea20a9eeee64b55d39a2192992a274fc1a836ba3c23a3feebbd454d4423643ce80e2a9ac94fa54ca49f;
 	char get_from_file[64];
 	hash_file.open("hash_file",std::ios::binary);
 	hash_file.read(get_from_file,64);
