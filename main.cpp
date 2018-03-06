@@ -11,26 +11,19 @@
 
 
 int main() {
-	std::ifstream hash_file;
-	std::ifstream hash_hex;
-	char hash_file_char[65];
-	char hash_to_be[65];
-
-//	char test_abc_char[] = "";
-	unsigned char test_empty[]={};
-//	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
-	hash_input(test_empty,0);
-
-	hash_file.open("hash_file",std::ios::binary);
-	hash_file.read(hash_file_char,65);
-	hash_file.close();
-
-	hash_hex.open("hex2.txt",std::ios::binary);
-	hash_hex.read(hash_to_be,65);
-	hash_hex.close();
-	if((memcmp(hash_file_char,hash_to_be,64)==0)) {
-		std::cout <<"yes\n" ;
+	encryption("input_file.txt");
+	std::ifstream in_file;
+	std::ofstream out_file;
+	in_file.open("output_file",std::ios::binary);
+	out_file.open("decrypted_file",std::ios::binary);
+	if (!(in_file.is_open() && out_file.is_open())) {
+		std::cout << "Some trouble with opening file." << std::endl;
+		return 2;
 	}
+	aes_decryption(&in_file,&out_file);
+	in_file.close();
+	out_file.close();
+
 
 
 	std::cout << "What do you want to do?" << std::endl;
@@ -40,8 +33,8 @@ int main() {
 	unsigned int opt = 0;
 	std::cin >> opt;
 
-	std::ifstream in_file;
-	std::ofstream out_file;
+//	std::ifstream in_file;
+//	std::ofstream out_file;
 
 	if (opt==1) {
 		std::cout << "Write the name of file (input for encryption): " << std::endl;
