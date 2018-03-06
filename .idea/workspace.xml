@@ -60,8 +60,8 @@
           <file leaf-file-name="func.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="481">
-                  <caret line="262" column="46" lean-forward="false" selection-start-line="262" selection-start-column="46" selection-end-line="262" selection-end-column="46" />
+                <state relative-caret-position="-330">
+                  <caret line="178" column="60" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="60" />
                   <folding>
                     <element signature="e#1212#1374#0" expanded="false" />
                     <element signature="e#1212#2075#0" expanded="false" />
@@ -156,8 +156,8 @@
           <file leaf-file-name="func.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="393">
-                  <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+                <state relative-caret-position="657">
+                  <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
                   <folding>
                     <element signature="e#98#117#0" expanded="true" />
                   </folding>
@@ -194,8 +194,8 @@
         <option value="$PROJECT_DIR$/mbedtls/ctr_drbg.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/tests.cpp" />
-        <option value="$PROJECT_DIR$/func.hpp" />
         <option value="$PROJECT_DIR$/func.cpp" />
+        <option value="$PROJECT_DIR$/func.hpp" />
       </list>
     </option>
   </component>
@@ -466,7 +466,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="15988000" />
+      <workItem from="1520271858886" duration="16427000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -783,11 +783,25 @@
       <option name="project" value="LOCAL" />
       <updated>1520328019682</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="changed encryption - divide into smaller functions">
+      <created>1520328739433</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1520328739433</updated>
+    </task>
+    <task id="LOCAL-00047" summary="changed decryption - loading iv and key">
+      <created>1520329009666</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1520329009666</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97692000" />
+    <option name="totallyTimeSpent" value="98131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -808,7 +822,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34270832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34270832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -857,7 +871,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aes files" />
     <MESSAGE value="some other files add" />
     <MESSAGE value="add some mbedtls files, function for generating aes key, function for encrypting" />
     <MESSAGE value="encrypting and decrypting is ok, but need to be change the getting data from input file and hashing them" />
@@ -882,7 +895,8 @@
     <MESSAGE value="hash_input test vector 2" />
     <MESSAGE value="hash_input test vector 3" />
     <MESSAGE value="changed encryption - divide into smaller functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed encryption - divide into smaller functions" />
+    <MESSAGE value="changed decryption - loading iv and key" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed decryption - loading iv and key" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,6 +938,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -999,6 +1014,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,6 +1146,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1275,25 +1292,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/func.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-          <folding>
-            <element signature="e#98#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/func.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="262" column="46" lean-forward="false" selection-start-line="262" selection-start-column="46" selection-end-line="262" selection-end-column="46" />
+        <state relative-caret-position="-330">
+          <caret line="178" column="60" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="60" />
           <folding>
             <element signature="e#1212#1374#0" expanded="false" />
             <element signature="e#1212#2075#0" expanded="false" />
             <element signature="e#2077#2292#0" expanded="false" />
             <element signature="e#2295#2806#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/func.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="82" column="31" lean-forward="false" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+          <folding>
+            <element signature="e#98#117#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -199,6 +199,7 @@ bool load_key_iv_file(unsigned char* key, unsigned char* iv){
 		std::cout << "Error in opening iv_file. Decryption ended without success." << std::endl;
 		return false;
 	}
+	return true;
 }
 
 /**
@@ -223,7 +224,6 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	if(!load_key_iv_file(key,iv)) {
 		return false;
 	}
-
 
 	mbedtls_aes_init(&aes);
 	if (mbedtls_aes_setkey_dec( &aes, key, 256 )) {

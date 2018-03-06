@@ -79,6 +79,15 @@ void aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_ae
 void encryption(const char *infile_name);
 
 /**
+ * bool load_key_iv_file(unsigned char* key, unsigned char* iv)
+ * - loads form file key and iv
+ * @param key
+ * @param iv
+ * @return
+ */
+bool load_key_iv_file(unsigned char* key, unsigned char* iv);
+
+/**
  * void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file)
  * @param enc_file - encrypted file which will be decrypted
  * @param dec_file - file in which will be saved the decrypted enc_file
