@@ -129,7 +129,24 @@ TEST_CASE("get_random_string","funcion test") {
 	CHECK(memcmp(key3,key1,16)!=0);
 }
 
+TEST_CASE("gen_key_iv","generate and save") {
+	unsigned char key[16];
+	unsigned char iv[16];
+	gen_key_iv(key,iv);
 
+	std::ifstream file;
+	char key_file[16];
+	char iv_file[16];
+	file.open("key_file",std::ios::binary);
+	file.read(key_file,16);
+	file.close();
+	file.open("iv_file",std::ios::binary);
+	file.read(iv_file,16);
+	file.close();
+
+	CHECK(memcmp(key,key_file,16)==0);
+	CHECK(memcmp(iv,iv_file,16)==0);
+}
 
 TEST_CASE("aes_encryption1","tests_vectors1") {
 	std::ifstream input_file;
