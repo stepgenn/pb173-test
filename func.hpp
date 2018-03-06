@@ -28,9 +28,11 @@ void hash_input(unsigned char* input, size_t input_len);
  * @return
  */
 bool gen_key_iv(unsigned char *key, unsigned char *iv);
+
 /**
- * gen_and_set_aes_enc(mbedtls_aes_context *aes) - generate random key, save it to a file and set aes with key
- * @param aes - context which should be set
+ * function set aes_context for encryption with key
+ * @param aes
+ * @param key
  * @return
  */
 bool set_aes_enc(mbedtls_aes_context *aes, unsigned char* key);
