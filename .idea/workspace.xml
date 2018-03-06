@@ -49,10 +49,10 @@
           <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="524">
-                  <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+                <state relative-caret-position="458">
+                  <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
                   <folding>
-                    <element signature="e#2492#2984#0" expanded="false" />
+                    <element signature="e#2460#2952#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -468,7 +468,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="11119000" />
+      <workItem from="1520271858886" duration="11322000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -715,11 +715,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520323530700</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="hash_input test vector 2">
+      <created>1520323871561</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1520323871561</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92823000" />
+    <option name="totallyTimeSpent" value="93026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -811,7 +818,8 @@
     <MESSAGE value="test of hash function 4" />
     <MESSAGE value="test of hash function - changed to array of long int" />
     <MESSAGE value="hash_input test vector 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="hash_input test vector 1" />
+    <MESSAGE value="hash_input test vector 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="hash_input test vector 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1210,10 +1218,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="458">
+          <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
           <folding>
-            <element signature="e#2492#2984#0" expanded="false" />
+            <element signature="e#2460#2952#0" expanded="false" />
           </folding>
         </state>
       </provider>

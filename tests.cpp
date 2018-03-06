@@ -36,9 +36,9 @@ TEST_CASE("hash_input","tests_vectors") {
 
 
 	char test_abc_char[] = "";
-	unsigned char test_abc[strlen(test_abc_char)];
-	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
-	hash_input(test_abc,strlen(test_abc_char));
+	unsigned char test_empty[]={};
+//	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
+	hash_input(test_empty,0);
 
 	hash_file.open("hash_file",std::ios::binary);
 	hash_file.read(hash_file_char,65);
