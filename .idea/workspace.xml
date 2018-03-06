@@ -49,8 +49,8 @@
           <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
-                  <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+                <state relative-caret-position="443">
+                  <caret line="129" column="4" lean-forward="true" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -160,7 +160,7 @@
           <file leaf-file-name="func.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1562">
+                <state relative-caret-position="383">
                   <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
                   <folding>
                     <element signature="e#98#117#0" expanded="true" />
@@ -470,7 +470,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="14417000" />
+      <workItem from="1520271858886" duration="14532000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -759,11 +759,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520327052418</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="changed encryption - divide into smaller functions">
+      <created>1520327161946</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1520327161946</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96121000" />
+    <option name="totallyTimeSpent" value="96236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1271,8 +1278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state relative-caret-position="443">
+          <caret line="129" column="4" lean-forward="true" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
           <folding />
         </state>
       </provider>
