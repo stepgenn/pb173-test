@@ -8,11 +8,6 @@
 
 #include "catch.hpp"
 
-TEST_CASE("Hello word","hello") {
-	CHECK(true);
-	CHECK(1!=0);
-}
-
 TEST_CASE("hash_input","tests_vectors") {
 	std::ifstream hash_file;
 	std::ifstream hash_hex;
@@ -113,6 +108,25 @@ TEST_CASE("write_in_file","function test") {
 	CHECK(memcmp(buffer,char_string,len)==0);
 
 	out_file.close();
+}
+
+TEST_CASE("get_random_string","funcion test") {
+	unsigned char key1[16];
+	unsigned char key2[16];
+	unsigned char key3[32];
+	gen_random_string(key1,16);
+
+	memcpy(key2,key1,16);
+	CHECK(memcmp(key1,key2,16)==0);
+
+	gen_random_string(key2,16);
+	CHECK(memcmp(key1,key2,16)!=0);
+
+	memcpy(key3+17,key1,16);
+	CHECK(memcmp(key3+17,key1,16)==0);
+	gen_random_string(key3,16);
+	CHECK(memcmp(key3+17,key1,16)==0);
+	CHECK(memcmp(key3,key1,16)!=0);
 }
 
 TEST_CASE("aes_encryption1","tests_vectors1") {

@@ -73,7 +73,8 @@ bool gen_random_string(unsigned char *key, unsigned int length){
 		printf( " failed\n ! mbedtls_ctr_drbg_random returned -0x%04x\n", -ret );
 		return false;
 	}
-
+	mbedtls_entropy_free(&entropy);
+	mbedtls_ctr_drbg_free(&ctr_drbg);
 	return true;
 }
 
