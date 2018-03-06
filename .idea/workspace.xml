@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/func.cpp" afterPath="$PROJECT_DIR$/func.cpp" />
-      <change beforePath="$PROJECT_DIR$/func.hpp" afterPath="$PROJECT_DIR$/func.hpp" />
       <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
     </list>
     <ignored path="pb173-test.iws" />
@@ -53,8 +51,8 @@
               <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="667">
-                      <caret line="349" column="4" lean-forward="false" selection-start-line="349" selection-start-column="4" selection-end-line="349" selection-end-column="4" />
+                    <state relative-caret-position="689">
+                      <caret line="366" column="11" lean-forward="false" selection-start-line="366" selection-start-column="11" selection-end-line="366" selection-end-column="11" />
                       <folding>
                         <element signature="e#151#1699#0" expanded="false" />
                         <element signature="e#1747#2359#0" expanded="false" />
@@ -193,8 +191,8 @@
           <file leaf-file-name="func.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
+                <state relative-caret-position="308">
+                  <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding>
                     <element signature="e#98#117#0" expanded="true" />
                   </folding>
@@ -506,14 +504,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="26561000" />
-    </task>
-    <task id="LOCAL-00017" summary="one test for get_infile_length">
-      <created>1519897122481</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1519897122481</updated>
+      <workItem from="1520271858886" duration="26845000" />
     </task>
     <task id="LOCAL-00018" summary="another one test for get_infile_length">
       <created>1519898233026</created>
@@ -851,11 +842,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520339105169</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="test everything">
+      <created>1520339536587</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1520339536587</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108265000" />
+    <option name="totallyTimeSpent" value="108549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,7 +923,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="another one test for get_infile_length" />
     <MESSAGE value="write_in_file tests" />
     <MESSAGE value="test for everything" />
     <MESSAGE value="test for everything - corrected returns" />
@@ -950,7 +947,8 @@
     <MESSAGE value="load_key_iv_file tests5" />
     <MESSAGE value="remove_padding test 1" />
     <MESSAGE value="remove_padding test 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove_padding test 2" />
+    <MESSAGE value="test everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="test everything" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1363,8 +1361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="349" column="4" lean-forward="false" selection-start-line="349" selection-start-column="4" selection-end-line="349" selection-end-column="4" />
+        <state relative-caret-position="689">
+          <caret line="366" column="11" lean-forward="false" selection-start-line="366" selection-start-column="11" selection-end-line="366" selection-end-column="11" />
           <folding>
             <element signature="e#151#1699#0" expanded="false" />
             <element signature="e#1747#2359#0" expanded="false" />
