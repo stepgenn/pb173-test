@@ -85,7 +85,7 @@ void encryption(const char *infile_name);
  * @param iv
  * @return
  */
-bool load_key_iv_file(unsigned char* key, unsigned char* iv);
+bool load_key_iv_file(unsigned char* key,const char* file_key, unsigned char* iv,const char* file_iv);
 
 /**
  * unsigned int remove_padding(unsigned char* output, size_t output_len)

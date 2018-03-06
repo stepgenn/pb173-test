@@ -176,10 +176,10 @@ void encryption(const char *infile_name) {
 }
 
 
-bool load_key_iv_file(unsigned char* key, unsigned char* iv){
+bool load_key_iv_file(unsigned char* key, const char* file_key, unsigned char* iv, const char* file_iv){
 	char buffer[33];
 	std::ifstream key_file;
-	key_file.open("key_file",std::ios::binary);
+	key_file.open(file_key,std::ios::binary);
 	if (key_file.is_open()) {
 		key_file.read(buffer,32);
 		std::copy(buffer,buffer+32,key);
@@ -190,7 +190,7 @@ bool load_key_iv_file(unsigned char* key, unsigned char* iv){
 	}
 
 	std::ifstream iv_file;
-	iv_file.open("iv_file",std::ios::binary);
+	iv_file.open(file_iv,std::ios::binary);
 	if (iv_file.is_open()) {
 		iv_file.read(buffer,16);
 		std::copy(buffer, buffer+16,iv);
@@ -235,7 +235,7 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	size_t output_len = input_len;
 	unsigned char output_hash[64];
 
-	if(!load_key_iv_file(key,iv)) {
+	if(!load_key_iv_file(key,(char*) "key_file",iv,(char*)"iv_file")) {
 		return false;
 	}
 

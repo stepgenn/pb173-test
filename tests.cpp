@@ -114,8 +114,18 @@ TEST_CASE("write_in_file","function test") {
 
 	out_file.close();
 }
+/*
+TEST_CASE("aes_encryption","tests_vectors") {
+	std::ifstream input_file;
+	input.open("test_aes/input_file",std::ios::binary);
+
+	std::ofstream output_file;
+	input_file.open(infile_name,std::ios::binary);
+	size_t input_len = get_infile_length(&input_file);
 
 
+}
+*/
 TEST_CASE("test everything","compare input and decrypted one"){
 	std::ofstream input2;
 	input2.open("input",std::ios::binary);
@@ -124,12 +134,8 @@ TEST_CASE("test everything","compare input and decrypted one"){
 
 	std::ifstream input;
 	std::ofstream output;
-//	input.open("input",std::ios::binary);
-//	output.open("encrypted",std::ios::binary);
 
 	encryption("input");
-//	input.close();
-//	output.close();
 
 	input.open("output_file",std::ios::binary);
 	output.open("decrypted",std::ios::binary);
