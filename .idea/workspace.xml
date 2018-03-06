@@ -51,8 +51,8 @@
               <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="418">
-                      <caret line="311" column="75" lean-forward="false" selection-start-line="311" selection-start-column="75" selection-end-line="311" selection-end-column="75" />
+                    <state relative-caret-position="399">
+                      <caret line="316" column="35" lean-forward="false" selection-start-line="316" selection-start-column="35" selection-end-line="316" selection-end-column="35" />
                       <folding>
                         <element signature="e#151#1699#0" expanded="false" />
                         <element signature="e#1747#2359#0" expanded="false" />
@@ -63,7 +63,8 @@
                         <element signature="e#4808#5795#0" expanded="false" />
                         <element signature="e#5842#6829#0" expanded="false" />
                         <element signature="e#6876#7863#0" expanded="false" />
-                        <element signature="e#8534#8901#0" expanded="false" />
+                        <element signature="e#7915#8469#0" expanded="false" />
+                        <element signature="e#8729#9096#0" expanded="false" />
                       </folding>
                     </state>
                   </provider>
@@ -165,7 +166,7 @@
               <file leaf-file-name="func.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/func.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-286">
+                    <state relative-caret-position="-91">
                       <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
                       <folding>
                         <element signature="e#504#1209#0" expanded="false" />
@@ -175,7 +176,7 @@
                         <element signature="e#2904#3521#0" expanded="false" />
                         <element signature="e#3523#3791#0" expanded="false" />
                         <element signature="e#3794#4758#0" expanded="false" />
-                        <element signature="e#5494#5847#0" expanded="false" />
+                        <element signature="e#4761#5491#0" expanded="false" />
                         <element signature="e#5850#7512#0" expanded="false" />
                       </folding>
                     </state>
@@ -504,14 +505,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="24987000" />
-    </task>
-    <task id="LOCAL-00013" summary="onet test for get_infile_length">
-      <created>1519896517988</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1519896517988</updated>
+      <workItem from="1520271858886" duration="25640000" />
     </task>
     <task id="LOCAL-00014" summary="one test for get_infile_length - change to strlen">
       <created>1519896636469</created>
@@ -849,11 +843,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520336658548</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="load_key_iv_file tests5">
+      <created>1520337966265</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1520337966265</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106691000" />
+    <option name="totallyTimeSpent" value="107344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -923,7 +924,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="onet test for get_infile_length" />
     <MESSAGE value="one test for get_infile_length - change to strlen" />
     <MESSAGE value="one test for get_infile_length" />
     <MESSAGE value="another one test for get_infile_length" />
@@ -948,7 +948,8 @@
     <MESSAGE value="aes_encryption text vector 3,4" />
     <MESSAGE value="get_random_string tests" />
     <MESSAGE value="gen_key_iv tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="gen_key_iv tests" />
+    <MESSAGE value="load_key_iv_file tests5" />
+    <option name="LAST_COMMIT_MESSAGE" value="load_key_iv_file tests5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -967,11 +968,6 @@
           <url>file://$PROJECT_DIR$/func.cpp</url>
           <line>139</line>
           <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/func.cpp</url>
-          <line>179</line>
-          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/func.cpp</url>
@@ -1371,8 +1367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="311" column="75" lean-forward="false" selection-start-line="311" selection-start-column="75" selection-end-line="311" selection-end-column="75" />
+        <state relative-caret-position="399">
+          <caret line="316" column="35" lean-forward="false" selection-start-line="316" selection-start-column="35" selection-end-line="316" selection-end-column="35" />
           <folding>
             <element signature="e#151#1699#0" expanded="false" />
             <element signature="e#1747#2359#0" expanded="false" />
@@ -1383,7 +1379,8 @@
             <element signature="e#4808#5795#0" expanded="false" />
             <element signature="e#5842#6829#0" expanded="false" />
             <element signature="e#6876#7863#0" expanded="false" />
-            <element signature="e#8534#8901#0" expanded="false" />
+            <element signature="e#7915#8469#0" expanded="false" />
+            <element signature="e#8729#9096#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -312,6 +312,11 @@ TEST_CASE("load_key_iv_file","some random string"){
 	CHECK(!load_key_iv_file(key2,"key_iv_file",iv2,"key_iv_file_notexisting"));
 }
 
+TEST_CASE("remove_padding","function test") {
+	unsigned char str1[16] = {0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D,0x0E,0x0F,0x10};
+	CHECK(remove_padding(str1,16)== 0);
+}
+
 
 TEST_CASE("test everything","compare input and decrypted one"){
 	std::ofstream input2;
