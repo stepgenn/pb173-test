@@ -15,12 +15,11 @@ TEST_CASE("Hello word","hello") {
 
 TEST_CASE("hash_input","tests_vectors") {
 	std::ifstream hash_file;
+	std::ifstream hash_hex;
 	char hash_file_char[65];
 	char hash_to_be[65];
-//	unsigned char test_empty = {};
 
-
-
+	//for test vector "abc", file with check hash is "hex1.txt"
 	char test_abc_char[] = "abc";
 	unsigned char test_abc[strlen(test_abc_char)];
 	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
@@ -30,11 +29,26 @@ TEST_CASE("hash_input","tests_vectors") {
 	hash_file.read(hash_file_char,65);
 	hash_file.close();
 
-	std::ifstream hash_hex;
 	hash_hex.open("hex1.txt",std::ios::binary);
 	hash_hex.read(hash_to_be,65);
 	hash_hex.close();
 	CHECK(memcmp(hash_file_char,hash_to_be,64)==0);
+
+
+	char test_abc_char[] = "";
+	unsigned char test_abc[strlen(test_abc_char)];
+	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
+	hash_input(test_abc,strlen(test_abc_char));
+
+	hash_file.open("hash_file",std::ios::binary);
+	hash_file.read(hash_file_char,65);
+	hash_file.close();
+
+	hash_hex.open("hex2.txt",std::ios::binary);
+	hash_hex.read(hash_to_be,65);
+	hash_hex.close();
+	CHECK(memcmp(hash_file_char,hash_to_be,64)==0);
+
 
 }
 
