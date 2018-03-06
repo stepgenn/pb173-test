@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/func.cpp" afterPath="$PROJECT_DIR$/func.cpp" />
-      <change beforePath="$PROJECT_DIR$/func.hpp" afterPath="$PROJECT_DIR$/func.hpp" />
       <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
     </list>
     <ignored path="pb173-test.iws" />
@@ -51,8 +49,8 @@
           <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="463">
-                  <caret line="127" column="2" lean-forward="false" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
+                <state relative-caret-position="535">
+                  <caret line="151" column="24" lean-forward="false" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
                   <folding>
                     <element signature="e#216#1764#0" expanded="false" />
                     <element signature="e#1812#2424#0" expanded="false" />
@@ -65,8 +63,8 @@
           <file leaf-file-name="func.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/func.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1572">
-                  <caret line="178" column="89" lean-forward="false" selection-start-line="178" selection-start-column="89" selection-end-line="178" selection-end-column="89" />
+                <state relative-caret-position="496">
+                  <caret line="174" column="24" lean-forward="true" selection-start-line="155" selection-start-column="4" selection-end-line="174" selection-end-column="24" />
                   <folding>
                     <element signature="e#1212#1374#0" expanded="false" />
                     <element signature="e#1212#2075#0" expanded="false" />
@@ -161,7 +159,7 @@
           <file leaf-file-name="func.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
+                <state relative-caret-position="108">
                   <caret line="87" column="86" lean-forward="false" selection-start-line="87" selection-start-column="86" selection-end-line="87" selection-end-column="86" />
                   <folding>
                     <element signature="e#98#117#0" expanded="true" />
@@ -471,14 +469,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="18358000" />
-    </task>
-    <task id="LOCAL-00002" summary="some other files add">
-      <created>1519248873637</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1519248873637</updated>
+      <workItem from="1520271858886" duration="18839000" />
     </task>
     <task id="LOCAL-00003" summary="add some mbedtls files, function for generating aes key, function for encrypting">
       <created>1519422012401</created>
@@ -816,11 +807,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520330044548</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="changed decryption - changed loading iv and key">
+      <created>1520331125523</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1520331125523</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100062000" />
+    <option name="totallyTimeSpent" value="100543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,7 +888,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add some mbedtls files, function for generating aes key, function for encrypting" />
     <MESSAGE value="encrypting and decrypting is ok, but need to be change the getting data from input file and hashing them" />
     <MESSAGE value="Added hash." />
     <MESSAGE value="Maybe final" />
@@ -915,7 +912,8 @@
     <MESSAGE value="changed encryption - divide into smaller functions" />
     <MESSAGE value="changed decryption - loading iv and key" />
     <MESSAGE value="changed decryption - padding" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed decryption - padding" />
+    <MESSAGE value="changed decryption - changed loading iv and key" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed decryption - changed loading iv and key" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1315,8 +1313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/func.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1572">
-          <caret line="178" column="89" lean-forward="false" selection-start-line="178" selection-start-column="89" selection-end-line="178" selection-end-column="89" />
+        <state relative-caret-position="496">
+          <caret line="174" column="24" lean-forward="true" selection-start-line="155" selection-start-column="4" selection-end-line="174" selection-end-column="24" />
           <folding>
             <element signature="e#1212#1374#0" expanded="false" />
             <element signature="e#1212#2075#0" expanded="false" />
@@ -1328,8 +1326,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="127" column="2" lean-forward="false" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
+        <state relative-caret-position="535">
+          <caret line="151" column="24" lean-forward="false" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
           <folding>
             <element signature="e#216#1764#0" expanded="false" />
             <element signature="e#1812#2424#0" expanded="false" />
