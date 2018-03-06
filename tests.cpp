@@ -338,7 +338,7 @@ TEST_CASE("test everything","compare input and decrypted one"){
 
 	//testing not exists file and empty file
 	input2.open("input",std::ios::binary);
-	input2 << "" << std::endl;
+	input2 << "";
 	input2.close();
 
 

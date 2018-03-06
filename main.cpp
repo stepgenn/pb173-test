@@ -11,9 +11,6 @@
 
 
 int main() {
-
-
-
 	std::cout << "What do you want to do?" << std::endl;
 	std::cout << "1) Encrypt and hash supplied file, write into out file.\n";
 	std::cout << "2) Decrypt and verify hash.\n";
