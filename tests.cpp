@@ -296,6 +296,22 @@ TEST_CASE("aes_encryption4","tests_vectors4") {
 	cipher_text.close();
 }
 
+TEST_CASE("load_key_iv_file","some random string"){
+	unsigned char key[16] = {0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D,0x0E,0x0F,0x10};
+	std::ofstream ofile;
+	ofile.open("key_iv_file",std::ios::binary);
+	ofile.write((char*)key,16);
+	ofile.close();
+
+	unsigned char key2[16];
+	unsigned char iv2[16];
+	CHECK(load_key_iv_file(key2,"key_iv_file",iv2,"key_iv_file"));
+	CHECK(memcmp(key,key2,16)==0);
+	CHECK(memcmp(key,iv2,16)==0);
+	CHECK(!load_key_iv_file(key2,"key_iv_file_notexisting",iv2,"key_iv_file"));
+	CHECK(!load_key_iv_file(key2,"key_iv_file",iv2,"key_iv_file_notexisting"));
+}
+
 
 TEST_CASE("test everything","compare input and decrypted one"){
 	std::ofstream input2;

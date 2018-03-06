@@ -51,17 +51,19 @@
               <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="506">
-                      <caret line="147" column="36" lean-forward="false" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
+                    <state relative-caret-position="418">
+                      <caret line="311" column="75" lean-forward="false" selection-start-line="311" selection-start-column="75" selection-end-line="311" selection-end-column="75" />
                       <folding>
                         <element signature="e#151#1699#0" expanded="false" />
                         <element signature="e#1747#2359#0" expanded="false" />
                         <element signature="e#2403#2888#0" expanded="false" />
                         <element signature="e#2935#3324#0" expanded="false" />
+                        <element signature="e#3369#3733#0" expanded="false" />
+                        <element signature="e#3780#4761#0" expanded="false" />
                         <element signature="e#4808#5795#0" expanded="false" />
                         <element signature="e#5842#6829#0" expanded="false" />
                         <element signature="e#6876#7863#0" expanded="false" />
-                        <element signature="e#7928#8295#0" expanded="false" />
+                        <element signature="e#8534#8901#0" expanded="false" />
                       </folding>
                     </state>
                   </provider>
@@ -163,7 +165,7 @@
               <file leaf-file-name="func.cpp" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/func.cpp">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="300">
+                    <state relative-caret-position="-286">
                       <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
                       <folding>
                         <element signature="e#504#1209#0" expanded="false" />
@@ -173,7 +175,6 @@
                         <element signature="e#2904#3521#0" expanded="false" />
                         <element signature="e#3523#3791#0" expanded="false" />
                         <element signature="e#3794#4758#0" expanded="false" />
-                        <element signature="e#4761#5491#0" expanded="false" />
                         <element signature="e#5494#5847#0" expanded="false" />
                         <element signature="e#5850#7512#0" expanded="false" />
                       </folding>
@@ -503,14 +504,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="23842000" />
-    </task>
-    <task id="LOCAL-00012" summary="onet test for get_infile_length">
-      <created>1519896345854</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1519896345854</updated>
+      <workItem from="1520271858886" duration="24987000" />
     </task>
     <task id="LOCAL-00013" summary="onet test for get_infile_length">
       <created>1519896517988</created>
@@ -848,11 +842,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520336173794</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="gen_key_iv tests">
+      <created>1520336658548</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1520336658548</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105546000" />
+    <option name="totallyTimeSpent" value="106691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,7 +923,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="retyping in ctr_drbg.c and entropy.c" />
     <MESSAGE value="onet test for get_infile_length" />
     <MESSAGE value="one test for get_infile_length - change to strlen" />
     <MESSAGE value="one test for get_infile_length" />
@@ -947,7 +947,8 @@
     <MESSAGE value="aes_encryption text vector 2" />
     <MESSAGE value="aes_encryption text vector 3,4" />
     <MESSAGE value="get_random_string tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="get_random_string tests" />
+    <MESSAGE value="gen_key_iv tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="gen_key_iv tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -961,16 +962,6 @@
           <url>file://$PROJECT_DIR$/main.cpp</url>
           <line>54</line>
           <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/func.cpp</url>
-          <line>91</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/func.cpp</url>
-          <line>109</line>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/func.cpp</url>
@@ -1380,17 +1371,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="147" column="36" lean-forward="false" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
+        <state relative-caret-position="418">
+          <caret line="311" column="75" lean-forward="false" selection-start-line="311" selection-start-column="75" selection-end-line="311" selection-end-column="75" />
           <folding>
             <element signature="e#151#1699#0" expanded="false" />
             <element signature="e#1747#2359#0" expanded="false" />
             <element signature="e#2403#2888#0" expanded="false" />
             <element signature="e#2935#3324#0" expanded="false" />
+            <element signature="e#3369#3733#0" expanded="false" />
+            <element signature="e#3780#4761#0" expanded="false" />
             <element signature="e#4808#5795#0" expanded="false" />
             <element signature="e#5842#6829#0" expanded="false" />
             <element signature="e#6876#7863#0" expanded="false" />
-            <element signature="e#7928#8295#0" expanded="false" />
+            <element signature="e#8534#8901#0" expanded="false" />
           </folding>
         </state>
       </provider>
