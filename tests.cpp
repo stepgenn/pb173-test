@@ -189,6 +189,80 @@ TEST_CASE("aes_encryption2","tests_vectors2") {
 	cipher_text.close();
 }
 
+TEST_CASE("aes_encryption3","tests_vectors3") {
+	std::ifstream input_file;
+	std::ifstream cipher_text;
+	std::ofstream output_file;
+	input_file.open("test_aes3/input_file",std::ios::binary);
+	cipher_text.open("test_aes3/cipher_text",std::ios::binary);
+	output_file.open("test_aes3/output_file",std::ios::binary);
+	size_t input_len = get_infile_length(&input_file);
+
+	size_t pom = 16;
+	unsigned char input[pom+1];
+	char buffer[pom+1];
+	char buffer2[pom+1];
+	input_file.read(buffer,input_len);
+	std::copy(buffer,buffer+input_len,input);
+
+	unsigned char iv[16];
+	unsigned char key[16];
+	load_key_iv_file(key,"test_aes3/key_file",iv,"test_aes3/iv_file");
+
+	mbedtls_aes_context aes;
+	set_aes_enc(&aes,key);
+	aes_encryption(input,&output_file,&aes,iv,input_len);
+	mbedtls_aes_free(&aes);
+	input_file.close();
+	output_file.close();
+
+	input_file.open("test_aes3/output_file",std::ios::binary);
+	input_file.read(buffer,pom);
+	cipher_text.read(buffer2,pom);
+
+	CHECK(memcmp(buffer,buffer2,pom)==0);
+
+	input_file.close();
+	cipher_text.close();
+}
+
+TEST_CASE("aes_encryption4","tests_vectors4") {
+	std::ifstream input_file;
+	std::ifstream cipher_text;
+	std::ofstream output_file;
+	input_file.open("test_aes4/input_file",std::ios::binary);
+	cipher_text.open("test_aes4/cipher_text",std::ios::binary);
+	output_file.open("test_aes4/output_file",std::ios::binary);
+	size_t input_len = get_infile_length(&input_file);
+
+	size_t pom = 16;
+	unsigned char input[pom+1];
+	char buffer[pom+1];
+	char buffer2[pom+1];
+	input_file.read(buffer,input_len);
+	std::copy(buffer,buffer+input_len,input);
+
+	unsigned char iv[16];
+	unsigned char key[16];
+	load_key_iv_file(key,"test_aes4/key_file",iv,"test_aes4/iv_file");
+
+	mbedtls_aes_context aes;
+	set_aes_enc(&aes,key);
+	aes_encryption(input,&output_file,&aes,iv,input_len);
+	mbedtls_aes_free(&aes);
+	input_file.close();
+	output_file.close();
+
+	input_file.open("test_aes4/output_file",std::ios::binary);
+	input_file.read(buffer,pom);
+	cipher_text.read(buffer2,pom);
+
+	CHECK(memcmp(buffer,buffer2,pom)==0);
+
+	input_file.close();
+	cipher_text.close();
+}
+
 
 TEST_CASE("test everything","compare input and decrypted one"){
 	std::ofstream input2;
