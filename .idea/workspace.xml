@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
     </list>
     <ignored path="pb173-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -469,14 +468,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="18839000" />
-    </task>
-    <task id="LOCAL-00003" summary="add some mbedtls files, function for generating aes key, function for encrypting">
-      <created>1519422012401</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1519422012401</updated>
+      <workItem from="1520271858886" duration="18877000" />
     </task>
     <task id="LOCAL-00004" summary="encrypting and decrypting is ok, but need to be change the getting data from input file and hashing them">
       <created>1519588702058</created>
@@ -814,11 +806,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520331125523</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="test fo eas_encryption with test vector">
+      <created>1520331622766</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1520331622766</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100543000" />
+    <option name="totallyTimeSpent" value="100581000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,7 +887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="encrypting and decrypting is ok, but need to be change the getting data from input file and hashing them" />
     <MESSAGE value="Added hash." />
     <MESSAGE value="Maybe final" />
     <MESSAGE value="another error" />
@@ -913,7 +911,8 @@
     <MESSAGE value="changed decryption - loading iv and key" />
     <MESSAGE value="changed decryption - padding" />
     <MESSAGE value="changed decryption - changed loading iv and key" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed decryption - changed loading iv and key" />
+    <MESSAGE value="test fo eas_encryption with test vector" />
+    <option name="LAST_COMMIT_MESSAGE" value="test fo eas_encryption with test vector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
