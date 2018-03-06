@@ -11,6 +11,28 @@
 
 
 int main() {
+	std::ifstream hash_file;
+	std::ifstream hash_hex;
+	char hash_file_char[65];
+	char hash_to_be[65];
+
+//	char test_abc_char[] = "";
+	unsigned char test_empty[]={};
+//	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
+	hash_input(test_empty,0);
+
+	hash_file.open("hash_file",std::ios::binary);
+	hash_file.read(hash_file_char,65);
+	hash_file.close();
+
+	hash_hex.open("hex2.txt",std::ios::binary);
+	hash_hex.read(hash_to_be,65);
+	hash_hex.close();
+	if((memcmp(hash_file_char,hash_to_be,64)==0)) {
+		std::cout <<"yes\n" ;
+	}
+
+
 	std::cout << "What do you want to do?" << std::endl;
 	std::cout << "1) Encrypt and hash supplied file, write into out file.\n";
 	std::cout << "2) Decrypt and verify hash.\n";

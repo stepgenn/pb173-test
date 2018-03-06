@@ -35,9 +35,8 @@ TEST_CASE("hash_input","tests_vectors") {
 	CHECK(memcmp(hash_file_char,hash_to_be,64)==0);
 
 
-	char test_abc_char[] = "";
+	//for test vector "", file with check hash is "hex2.txt"
 	unsigned char test_empty[]={};
-//	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
 	hash_input(test_empty,0);
 
 	hash_file.open("hash_file",std::ios::binary);
