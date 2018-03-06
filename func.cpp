@@ -176,26 +176,8 @@ void encryption(const char *infile_name) {
 }
 
 
-/**
- * void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file)
- * @param enc_file - encrypted file which will be decrypted
- * @param dec_file - file in which will be saved the decrypted enc_file
- */
-bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
-	mbedtls_aes_context aes;
-	mbedtls_sha512_context sha;
-	unsigned char key[32];
-	unsigned char iv[16];
-
-	size_t input_len = get_infile_length(enc_file);
-	unsigned char input[input_len];
-	unsigned char output[input_len];
-
-	char buffer[input_len > 32 ? input_len + 1 : 33];
-	size_t output_len = input_len;
-	unsigned char output_hash[64];
-
-
+bool load_key_iv_file(unsigned char* key, unsigned char* iv){
+	char buffer[33];
 	std::ifstream key_file;
 	key_file.open("key_file",std::ios::binary);
 	if (key_file.is_open()) {
@@ -217,6 +199,31 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 		std::cout << "Error in opening iv_file. Decryption ended without success." << std::endl;
 		return false;
 	}
+}
+
+/**
+ * void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file)
+ * @param enc_file - encrypted file which will be decrypted
+ * @param dec_file - file in which will be saved the decrypted enc_file
+ */
+bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
+	mbedtls_aes_context aes;
+	mbedtls_sha512_context sha;
+	unsigned char key[32];
+	unsigned char iv[16];
+
+	size_t input_len = get_infile_length(enc_file);
+	unsigned char input[input_len];
+	unsigned char output[input_len];
+
+	char buffer[input_len > 32 ? input_len + 1 : 33];
+	size_t output_len = input_len;
+	unsigned char output_hash[64];
+
+	if(!load_key_iv_file(key,iv)) {
+		return false;
+	}
+
 
 	mbedtls_aes_init(&aes);
 	if (mbedtls_aes_setkey_dec( &aes, key, 256 )) {
