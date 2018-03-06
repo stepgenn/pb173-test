@@ -202,11 +202,25 @@ bool load_key_iv_file(unsigned char* key, unsigned char* iv){
 	return true;
 }
 
-/**
- * void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file)
- * @param enc_file - encrypted file which will be decrypted
- * @param dec_file - file in which will be saved the decrypted enc_file
- */
+
+unsigned int remove_padding(unsigned char* output, size_t output_len){
+	unsigned int may_added = (unsigned int) output[output_len-1];
+	bool was_added = true;
+	for (unsigned int i = 1; i<= may_added; i++) {
+		if (output[output_len-1]!=output[output_len-i]) {
+			was_added = false;
+		}
+	}
+
+	if (was_added) {
+		return may_added;
+	} else {
+		return 0;
+	}
+
+}
+
+
 bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_context aes;
 	mbedtls_sha512_context sha;
@@ -236,25 +250,11 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_DECRYPT, input_len, iv, input, output );
 
 
-	unsigned int may_added = (unsigned int) output[input_len-1];
-	bool was_added = true;
-	for (unsigned int i = 1; i<= may_added; i++) {
-		if (output[input_len-1]!=output[input_len-i]) {
-			was_added = false;
-		}
-	}
-
-	if (was_added) {
-		std::copy(output,output+input_len-may_added,buffer);
-		dec_file->write(buffer,input_len-may_added);
-	} else {
-		std::copy(output,output+input_len,buffer);
-		dec_file->write(buffer,input_len);
-	}
-
-
+	unsigned int was_added = remove_padding(output,input_len);
+	std::copy(output,output+output_len-was_added,buffer);
+	dec_file->write(buffer,output_len-was_added);
 	mbedtls_sha512_init(&sha);
-	mbedtls_sha512(output,output_len-may_added,output_hash,0);
+	mbedtls_sha512(output,output_len-was_added,output_hash,0);
 
 	std::ifstream hash_file;
 	hash_file.open("hash_file");
