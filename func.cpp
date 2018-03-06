@@ -100,7 +100,7 @@ bool gen_and_set_aes_enc(mbedtls_aes_context *aes) {
 }
 
 
-bool aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_aes_context *aes, unsigned char* iv, size_t input_len){
+void aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_aes_context *aes, unsigned char* iv, size_t input_len){
 	size_t pom = (input_len/16+1)*16;
 
 	unsigned char output[pom+1];
@@ -203,7 +203,7 @@ void encryption(const char *infile_name) {
 	for (unsigned int i = input_len; i <pom; i++) {
 		input[i]=add;
 	}
-/*	if (!(gen_aes_key(iv,16) && gen_aes_key(key,32))) {
+	if (!(gen_aes_key(iv,16) && gen_aes_key(key,32))) {
 		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
 		return;
 	}

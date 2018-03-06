@@ -13,12 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hash_file" afterPath="$PROJECT_DIR$/hash_file" />
-      <change beforePath="$PROJECT_DIR$/iv_file" afterPath="$PROJECT_DIR$/iv_file" />
-      <change beforePath="$PROJECT_DIR$/key_file" afterPath="$PROJECT_DIR$/key_file" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change beforePath="$PROJECT_DIR$/output_file" afterPath="$PROJECT_DIR$/output_file" />
-      <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
+      <change beforePath="$PROJECT_DIR$/func.cpp" afterPath="$PROJECT_DIR$/func.cpp" />
+      <change beforePath="$PROJECT_DIR$/func.hpp" afterPath="$PROJECT_DIR$/func.hpp" />
     </list>
     <ignored path="pb173-test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +47,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="389">
@@ -61,20 +57,18 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="func.cpp" pinned="false" current-in-tab="false">
+          <file leaf-file-name="func.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="292">
-                  <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
                   <folding>
                     <element signature="e#1212#1374#0" expanded="false" />
                     <element signature="e#1212#2069#0" expanded="false" />
                     <element signature="e#2071#2569#0" expanded="false" />
-                    <element signature="e#2572#3083#0" expanded="false" />
                     <element signature="e#4520#4733#0" expanded="false" />
                     <element signature="e#4813#5250#0" expanded="false" />
-                    <element signature="e#5252#6121#0" expanded="false" />
-                    <element signature="e#6123#6152#0" expanded="false" />
+                    <element signature="e#6121#6150#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -164,8 +158,8 @@
           <file leaf-file-name="func.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/func.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="569">
-                  <caret line="71" column="22" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+                <state relative-caret-position="437">
+                  <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
                   <folding>
                     <element signature="e#98#117#0" expanded="true" />
                   </folding>
@@ -200,10 +194,10 @@
         <option value="$PROJECT_DIR$/ctr_drbg.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/mbedtls/ctr_drbg.h" />
-        <option value="$PROJECT_DIR$/func.cpp" />
-        <option value="$PROJECT_DIR$/func.hpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/tests.cpp" />
+        <option value="$PROJECT_DIR$/func.hpp" />
+        <option value="$PROJECT_DIR$/func.cpp" />
       </list>
     </option>
   </component>
@@ -474,7 +468,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="15109000" />
+      <workItem from="1520271858886" duration="15271000" />
     </task>
     <task id="LOCAL-00001" summary="aes files">
       <created>1519246832634</created>
@@ -777,11 +771,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520327277570</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="changed encryption - divide into smaller functions">
+      <created>1520327857332</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1520327857332</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96813000" />
+    <option name="totallyTimeSpent" value="96975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1247,38 +1248,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/func.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding>
-            <element signature="e#1212#1374#0" expanded="false" />
-            <element signature="e#1212#2069#0" expanded="false" />
-            <element signature="e#2071#2569#0" expanded="false" />
-            <element signature="e#2572#3083#0" expanded="false" />
-            <element signature="e#4520#4733#0" expanded="false" />
-            <element signature="e#4813#5250#0" expanded="false" />
-            <element signature="e#5252#6121#0" expanded="false" />
-            <element signature="e#6123#6152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../git-ci-demo/src/fact.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/func.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding>
-            <element signature="e#98#117#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1298,6 +1272,31 @@
         <state relative-caret-position="389">
           <caret line="133" column="27" lean-forward="false" selection-start-line="133" selection-start-column="27" selection-end-line="133" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/func.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="e#98#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/func.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding>
+            <element signature="e#1212#1374#0" expanded="false" />
+            <element signature="e#1212#2069#0" expanded="false" />
+            <element signature="e#2071#2569#0" expanded="false" />
+            <element signature="e#4520#4733#0" expanded="false" />
+            <element signature="e#4813#5250#0" expanded="false" />
+            <element signature="e#6121#6150#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

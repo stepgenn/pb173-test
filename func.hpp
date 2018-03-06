@@ -63,7 +63,7 @@ bool gen_aes_key(unsigned char *key, unsigned int length);
  * @param input_len - length of input
  * @return
  */
-bool aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_aes_context *aes, unsigned char* iv, size_t input_len);
+void aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_aes_context *aes, unsigned char* iv, size_t input_len);
 
 /**
  * encrypt file with name infile_name
