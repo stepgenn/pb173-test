@@ -22,11 +22,18 @@
 void hash_input(unsigned char* input, size_t input_len);
 
 /**
+ * generate and save into file iv and key
+ * @param key
+ * @param iv
+ * @return
+ */
+bool gen_key_iv(unsigned char *key, unsigned char *iv);
+/**
  * gen_and_set_aes_enc(mbedtls_aes_context *aes) - generate random key, save it to a file and set aes with key
  * @param aes - context which should be set
  * @return
  */
-bool gen_and_set_aes_enc(mbedtls_aes_context *aes);
+bool set_aes_enc(mbedtls_aes_context *aes, unsigned char* key);
 
 /**
  * size_t get_infile_length(std::ifstream *input_file)
@@ -50,7 +57,7 @@ bool write_in_file(const unsigned char* string, size_t string_length, const char
  * @param length
  * @return true is everything is OK, otherwise false
  */
-bool gen_aes_key(unsigned char *key, unsigned int length);
+bool gen_random_string(unsigned char *key, unsigned int length);
 
 
 /**
