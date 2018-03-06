@@ -99,12 +99,25 @@ bool gen_and_set_aes_enc(mbedtls_aes_context *aes) {
 	return true;
 }
 
-/*
-bool aes_encryption(std::ifstream *infile, std::ofstream outfile, mbedtls_aes_context *aes){
-	//TODO work with files, encryption with aes
+
+bool aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_aes_context *aes, unsigned char* iv, size_t input_len){
+	size_t pom = (input_len/16+1)*16;
+
+	unsigned char output[pom+1];
+	char buffer[pom+1 < 32 ? 33 : pom +1];
+
+
+	unsigned char add = (unsigned char) pom-input_len;
+	for (unsigned int i = input_len; i <pom; i++) {
+		input[i]=add;
+	}
+
+	mbedtls_aes_crypt_cbc( aes, MBEDTLS_AES_ENCRYPT, pom, iv, input, output );
+	std::copy(output,output+pom,buffer);
+	output_file->write(buffer,pom);
 }
-*/
-//TODO mozna predelat na void
+
+
 void hash_input(unsigned char* input, size_t input_len){
 	mbedtls_sha512_context sha;
 	unsigned char output_hash[64] ;
@@ -114,25 +127,61 @@ void hash_input(unsigned char* input, size_t input_len){
 	mbedtls_sha512_free(&sha);
 }
 
-/*
-void encryption(char *infile_name) {
-	//TODO otevirani souboru a volani funkci ostatnich
 
+void encryption(const char *infile_name) {
+	std::ifstream input_file;
+	std::ofstream output_file;
+	input_file.open(infile_name,std::ios::binary);
+	size_t input_len = get_infile_length(&input_file);
+
+	output_file.open("output_file",std::ios::binary);
+	if (!(input_file.is_open() && output_file.is_open())) {
+		std::cout << "Some trouble with opening file." << std::endl;
+		return;
+	}
+
+	if (input_len == 0) {
+		std::cout << "Size of input file is 0. Encryption was ended without success.";
+		return;
+	}
+
+	size_t pom = (input_len/16+1)*16;
+	unsigned char input[pom+1];
+	char buffer[input_len];
+	input_file.read(buffer,input_len);
+	std::copy(buffer,buffer+input_len,input);
+	hash_input(input,input_len);
+
+	unsigned char iv[16];
+	if (!(gen_aes_key(iv,16))) {
+		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
+		return;
+	}
+	if (!write_in_file(iv,16,"iv_file")) {
+		std::cout << "Encryption ended without saving iv.";
+		return;
+	}
+
+	mbedtls_aes_context aes;
+	gen_and_set_aes_enc(&aes);
+
+	aes_encryption(input,&output_file,&aes,iv,input_len);
+
+	mbedtls_aes_free(&aes);
+	input_file.close();
+	output_file.close();
 }
 
 
-
-*/
 
 /**
  *void aes_encryption(std::ifstream *input_file, std::ofstream *output_file)
  * @param input_file - file which will be encrypted
  * @param output_file - file in which will be saved the encrypted input_file
  */
-void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
-	mbedtls_aes_context aes;
+//void aes_encryption2(std::ifstream *input_file, std::ofstream *output_file){
+/*	mbedtls_aes_context aes;
 	unsigned char iv[16];
-//	unsigned char key[32];
 	size_t input_len = get_infile_length(input_file);
 	if (input_len == 0) {
 		std::cout << "Size of input file is 0. Encryption was ended without success.";
@@ -145,9 +194,9 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	char buffer[pom+1 < 32 ? 33 : pom +1];
 
 	input_file->read(buffer,input_len);
-	std::copy(buffer,buffer+input_len,input);
+	std::copy(buffer,buffer+input_len,input); */
 
-	hash_input(input,input_len);
+/*	hash_input(input,input_len);
 
 
 	unsigned char add = (unsigned char) pom-input_len;
@@ -169,27 +218,27 @@ void aes_encryption(std::ifstream *input_file, std::ofstream *output_file){
 	if (!(write_in_file(key,32,"key_file") && write_in_file(iv,16,"iv_file"))) {
 		std::cout << "Encryption ended without saving key and iv.";
 		return;
-	} */
+	}
 
 	if (!(gen_aes_key(iv,16))) {
 		std::cout << "Error in generating random key and iv, encryption ended without success." << std::endl;
 		return;
 	}
 	if (!write_in_file(iv,16,"iv_file")) {
-		std::cout << "Encryption ended without saving key and iv.";
+		std::cout << "Encryption ended without saving iv.";
 		return;
-	}
+	}*/
 
-	gen_and_set_aes_enc(&aes);
+//	gen_and_set_aes_enc(&aes);
 
-	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_ENCRYPT, pom, iv, input, output );
-	std::copy(output,output+pom,buffer);
-	output_file->write(buffer,pom);
+//	mbedtls_aes_crypt_cbc( &aes, MBEDTLS_AES_ENCRYPT, pom, iv, input, output );
+//	std::copy(output,output+pom,buffer);
+//	output_file->write(buffer,pom);
 
 
 //	mbedtls_sha512_free(&sha);
-	mbedtls_aes_free(&aes);
-}
+//	mbedtls_aes_free(&aes);
+//}
 
 
 /**

@@ -49,12 +49,13 @@ int main() {
 		std::getline(std::cin,file_name);
 		std::getline(std::cin,file_name);
 		in_file.open(file_name.c_str(),std::ios::binary);
-		out_file.open("output_file",std::ios::binary);
+/*		out_file.open("output_file",std::ios::binary);
 		if (!(in_file.is_open() && out_file.is_open())) {
 			std::cout << "Some trouble with opening file." << std::endl;
 			return 1;
-		}
-		aes_encryption(&in_file,&out_file);
+		}*/
+//		aes_encryption(&in_file,&out_file);
+		encryption(file_name.c_str());
 		in_file.close();
 		out_file.close();
 		std::cout << "\nOutput files: key_file, iv_file, hash_file, output_file" << std::endl;
