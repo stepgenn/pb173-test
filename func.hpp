@@ -78,7 +78,7 @@ void aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_ae
  * encrypt file with name infile_name
  * @param infile_name
  */
-void encryption(const char *infile_name);
+bool encryption(const char *infile_name);
 
 /**
  * bool load_key_iv_file(unsigned char* key, unsigned char* iv)

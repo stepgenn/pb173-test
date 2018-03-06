@@ -330,10 +330,23 @@ TEST_CASE("test everything","compare input and decrypted one"){
 	std::ifstream input;
 	std::ofstream output;
 
-	encryption("input");
+	CHECK(encryption("input"));
 
 	input.open("output_file",std::ios::binary);
 	output.open("decrypted",std::ios::binary);
 	CHECK(aes_decryption(&input,&output));
+
+
+	nput2.open("input",std::ios::binary);
+	input2 << "" << std::endl;
+	input2.close();
+
+	std::ifstream input;
+	std::ofstream output;
+
+	CHECK(!encryption("input"));
+	CHECK(!encryption("no_existing_random_file_name"));
+
+
 }
 

@@ -137,7 +137,7 @@ void hash_input(unsigned char* input, size_t input_len){
 }
 
 
-void encryption(const char *infile_name) {
+bool encryption(const char *infile_name) {
 	std::ifstream input_file;
 	std::ofstream output_file;
 	input_file.open(infile_name,std::ios::binary);
@@ -146,12 +146,12 @@ void encryption(const char *infile_name) {
 	output_file.open("output_file",std::ios::binary);
 	if (!(input_file.is_open() && output_file.is_open())) {
 		std::cout << "Some trouble with opening file." << std::endl;
-		return;
+		return false;
 	}
 
 	if (input_len == 0) {
 		std::cout << "Size of input file is 0. Encryption was ended without success.";
-		return;
+		return false;
 	}
 
 	size_t pom = (input_len/16+1)*16;
@@ -164,7 +164,7 @@ void encryption(const char *infile_name) {
 	unsigned char iv[16];
 	unsigned char key[16];
 	if(!gen_key_iv(key,iv)) {
-		return;
+		return false;
 	}
 	mbedtls_aes_context aes;
 	set_aes_enc(&aes,key);
@@ -174,6 +174,7 @@ void encryption(const char *infile_name) {
 	mbedtls_aes_free(&aes);
 	input_file.close();
 	output_file.close();
+	return true;
 }
 
 
@@ -254,6 +255,7 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	unsigned int was_added = remove_padding(output,input_len);
 	std::copy(output,output+output_len-was_added,buffer);
 	dec_file->write(buffer,output_len-was_added);
+
 	mbedtls_sha512_init(&sha);
 	mbedtls_sha512(output,output_len-was_added,output_hash,0);
 
