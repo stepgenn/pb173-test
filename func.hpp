@@ -88,6 +88,15 @@ void encryption(const char *infile_name);
 bool load_key_iv_file(unsigned char* key, unsigned char* iv);
 
 /**
+ * unsigned int remove_padding(unsigned char* output, size_t output_len)
+ * - funcion remove added padding
+ * @param output
+ * @param output_len
+ * @return the number of added characters
+ */
+unsigned int remove_padding(unsigned char* output, size_t output_len);
+
+/**
  * void aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file)
  * @param enc_file - encrypted file which will be decrypted
  * @param dec_file - file in which will be saved the decrypted enc_file
