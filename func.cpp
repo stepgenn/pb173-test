@@ -80,7 +80,7 @@ bool gen_random_string(unsigned char *key, unsigned int length){
 bool set_aes_enc(mbedtls_aes_context *aes, unsigned char* key) {
 
 	mbedtls_aes_init(aes);
-	if (mbedtls_aes_setkey_enc(aes, key, 256 )) {
+	if (mbedtls_aes_setkey_enc(aes, key, 128 )) {
 		std::cout << "Key set NOK" << std::endl;
 		return false;
 	};
@@ -115,11 +115,11 @@ bool gen_key_iv(unsigned char *key, unsigned char *iv){
 		std::cout << "Encryption ended without saving iv.";
 		return false;
 	}
-	if (!gen_random_string(key,32)) {
+	if (!gen_random_string(key,16)) {
 		std::cout << "Error in generating random key, encryption ended without success." << std::endl;
 		return false;
 	}
-	if (!write_in_file(key,32,"key_file")) {
+	if (!write_in_file(key,16,"key_file")) {
 		std::cout << "Encryption ended without saving key and iv.";
 		return false;
 	}
@@ -161,7 +161,7 @@ void encryption(const char *infile_name) {
 	hash_input(input,input_len);
 
 	unsigned char iv[16];
-	unsigned char key[32];
+	unsigned char key[16];
 	if(!gen_key_iv(key,iv)) {
 		return;
 	}
@@ -177,12 +177,12 @@ void encryption(const char *infile_name) {
 
 
 bool load_key_iv_file(unsigned char* key, const char* file_key, unsigned char* iv, const char* file_iv){
-	char buffer[33];
+	char buffer[17];
 	std::ifstream key_file;
 	key_file.open(file_key,std::ios::binary);
 	if (key_file.is_open()) {
-		key_file.read(buffer,32);
-		std::copy(buffer,buffer+32,key);
+		key_file.read(buffer,16);
+		std::copy(buffer,buffer+16,key);
 		key_file.close();
 	} else {
 		std::cout << "Error in opening key_file. Decryption ended without success." << std::endl;
@@ -224,14 +224,14 @@ unsigned int remove_padding(unsigned char* output, size_t output_len){
 bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	mbedtls_aes_context aes;
 	mbedtls_sha512_context sha;
-	unsigned char key[32];
+	unsigned char key[16];
 	unsigned char iv[16];
 
 	size_t input_len = get_infile_length(enc_file);
 	unsigned char input[input_len];
 	unsigned char output[input_len];
 
-	char buffer[input_len > 32 ? input_len + 1 : 33];
+	char buffer[input_len > 16 ? input_len + 1 : 17];
 	size_t output_len = input_len;
 	unsigned char output_hash[64];
 
@@ -240,7 +240,7 @@ bool aes_decryption(std::ifstream *enc_file, std::ofstream *dec_file) {
 	}
 
 	mbedtls_aes_init(&aes);
-	if (mbedtls_aes_setkey_dec( &aes, key, 256 )) {
+	if (mbedtls_aes_setkey_dec( &aes, key, 128 )) {
 		std::cout << "key set NOK" << std::endl;
 		return false;
 	};

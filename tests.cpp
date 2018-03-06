@@ -114,7 +114,7 @@ TEST_CASE("write_in_file","function test") {
 
 	out_file.close();
 }
-
+/*
 TEST_CASE("aes_encryption","tests_vectors") {
 	std::ifstream input_file;
 	std::ifstream cipher_text;
@@ -134,7 +134,7 @@ TEST_CASE("aes_encryption","tests_vectors") {
 	hash_input(input,input_len);
 
 	unsigned char iv[16];
-	unsigned char key[32];
+	unsigned char key[16];
 	load_key_iv_file(key,"test_aes/key_file",iv,"test_aes/iv_file");
 	mbedtls_aes_context aes;
 	set_aes_enc(&aes,key);
@@ -150,7 +150,7 @@ TEST_CASE("aes_encryption","tests_vectors") {
 
 	input_file.close();
 	cipher_text.close();
-}
+} */
 
 TEST_CASE("test everything","compare input and decrypted one"){
 	std::ofstream input2;
