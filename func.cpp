@@ -89,7 +89,7 @@ bool set_aes_enc(mbedtls_aes_context *aes, unsigned char* key) {
 
 
 void aes_encryption(unsigned char* input, std::ofstream* output_file, mbedtls_aes_context *aes, unsigned char* iv, size_t input_len){
-	size_t pom = (input_len/16+1)*16;
+	size_t pom = input_len%16==0 ? input_len:(input_len/16+1)*16;
 
 	unsigned char output[pom+1];
 	char buffer[pom+1 < 32 ? 33 : pom +1];

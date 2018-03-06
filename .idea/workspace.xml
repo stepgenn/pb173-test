@@ -11,10 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="test fo eas_encryption with test vector">
+    <list default="true" id="f5f74040-9a6f-4740-acbe-6739a27030ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/func.cpp" afterPath="$PROJECT_DIR$/func.cpp" />
-      <change beforePath="$PROJECT_DIR$/hash_file" afterPath="$PROJECT_DIR$/hash_file" />
       <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change beforePath="$PROJECT_DIR$/tests.cpp" afterPath="$PROJECT_DIR$/tests.cpp" />
     </list>
@@ -49,11 +48,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="false">
+          <file leaf-file-name="tests.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1166">
-                  <caret line="152" column="4" lean-forward="false" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
+                <state relative-caret-position="183">
+                  <caret line="118" column="4" lean-forward="false" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
                   <folding>
                     <element signature="e#216#1764#0" expanded="false" />
                     <element signature="e#1812#2424#0" expanded="false" />
@@ -66,12 +65,11 @@
           <file leaf-file-name="func.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/func.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-493">
-                  <caret line="235" column="32" lean-forward="false" selection-start-line="235" selection-start-column="32" selection-end-line="235" selection-end-column="32" />
+                <state relative-caret-position="158">
+                  <caret line="91" column="45" lean-forward="false" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
                   <folding>
                     <element signature="e#1212#1374#0" expanded="false" />
                     <element signature="e#1212#2075#0" expanded="false" />
-                    <element signature="e#2295#2806#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -99,14 +97,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
-                  <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+                <state relative-caret-position="198">
+                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
-                    <element signature="e#1873#2058#0" expanded="false" />
+                    <element signature="e#759#944#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -200,8 +198,8 @@
         <option value="$PROJECT_DIR$/mbedtls/ctr_drbg.h" />
         <option value="$PROJECT_DIR$/func.hpp" />
         <option value="$PROJECT_DIR$/func.cpp" />
-        <option value="$PROJECT_DIR$/tests.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/tests.cpp" />
       </list>
     </option>
   </component>
@@ -472,14 +470,7 @@
       <workItem from="1519640117705" duration="21058000" />
       <workItem from="1519802732961" duration="110000" />
       <workItem from="1519834962283" duration="18973000" />
-      <workItem from="1520271858886" duration="20202000" />
-    </task>
-    <task id="LOCAL-00005" summary="Added hash.">
-      <created>1519641843479</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1519641843480</updated>
+      <workItem from="1520271858886" duration="20734000" />
     </task>
     <task id="LOCAL-00006" summary="Maybe final">
       <created>1519749338138</created>
@@ -817,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520331637015</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="changed to aes-128">
+      <created>1520332971271</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1520332971271</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101906000" />
+    <option name="totallyTimeSpent" value="102438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -842,7 +840,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34270832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34270832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -891,7 +889,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added hash." />
     <MESSAGE value="Maybe final" />
     <MESSAGE value="another error" />
     <MESSAGE value="ctr_drbg extern c vol.42" />
@@ -916,7 +913,8 @@
     <MESSAGE value="changed decryption - padding" />
     <MESSAGE value="changed decryption - changed loading iv and key" />
     <MESSAGE value="test fo eas_encryption with test vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="test fo eas_encryption with test vector" />
+    <MESSAGE value="changed to aes-128" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to aes-128" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,16 +931,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>92</line>
+          <line>54</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>24</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1010,7 +1003,7 @@
           <caret line="94" column="0" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1873#2058#0" expanded="false" />
+            <element signature="e#759#944#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1086,7 +1079,7 @@
           <caret line="94" column="0" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="94" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1873#2058#0" expanded="false" />
+            <element signature="e#759#944#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1293,18 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/func.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="235" column="32" lean-forward="false" selection-start-line="235" selection-start-column="32" selection-end-line="235" selection-end-column="32" />
-          <folding>
-            <element signature="e#1212#1374#0" expanded="false" />
-            <element signature="e#1212#2075#0" expanded="false" />
-            <element signature="e#2295#2806#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/func.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1315,25 +1296,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests.cpp">
+    <entry file="file://$PROJECT_DIR$/func.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="152" column="4" lean-forward="false" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
+        <state relative-caret-position="158">
+          <caret line="91" column="45" lean-forward="false" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
           <folding>
-            <element signature="e#216#1764#0" expanded="false" />
-            <element signature="e#1812#2424#0" expanded="false" />
-            <element signature="e#2468#2953#0" expanded="false" />
+            <element signature="e#1212#1374#0" expanded="false" />
+            <element signature="e#1212#2075#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        <state relative-caret-position="198">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1873#2058#0" expanded="false" />
+            <element signature="e#759#944#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="118" column="4" lean-forward="false" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
+          <folding>
+            <element signature="e#216#1764#0" expanded="false" />
+            <element signature="e#1812#2424#0" expanded="false" />
+            <element signature="e#2468#2953#0" expanded="false" />
           </folding>
         </state>
       </provider>
