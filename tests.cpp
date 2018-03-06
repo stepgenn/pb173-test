@@ -15,6 +15,8 @@ TEST_CASE("Hello word","hello") {
 
 TEST_CASE("hash_input","tests_vectors") {
 	std::ifstream hash_file;
+	char hash_file_char[65];
+	char hash_to_be[65];
 //	unsigned char test_empty = {};
 
 
@@ -23,11 +25,16 @@ TEST_CASE("hash_input","tests_vectors") {
 	unsigned char test_abc[strlen(test_abc_char)];
 	memcpy(test_abc,test_abc_char,strlen(test_abc_char));
 	hash_input(test_abc,strlen(test_abc_char));
-	long int output_hash_abc[8] = {0xddaf35a193617aba, 0xcc417349ae204131, 0x12e6fa4e89a97ea2,0x0a9eeee64b55d39a, 0x2192992a274fc1a8, 0x36ba3c23a3feebbd, 0x454d4423643ce80e, 0x2a9ac94fa54ca49f};
-	char get_from_file[64];
+
 	hash_file.open("hash_file",std::ios::binary);
-	hash_file.read(get_from_file,64);
-	CHECK(memcmp(get_from_file,(void *)output_hash_abc,64)==0);
+	hash_file.read(hash_file_char,65);
+	hash_file.close();
+
+	std::ifstream hash_hex;
+	hash_hex.open("hex1.txt",std::ios::binary);
+	hash_hex.read(hash_to_be,65);
+	hash_hex.close();
+	CHECK(memcmp(hash_file_char,hash_to_be,64)==0);
 
 }
 
