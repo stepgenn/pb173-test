@@ -49,6 +49,20 @@ TEST_CASE("hash_input","tests_vectors") {
 	CHECK(memcmp(hash_file_char,hash_to_be,64)==0);
 
 
+//for test vector long, file with check hash is "hex1.txt"
+	char test_char[] = "abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmnoijklmnopjklmnopqklmnopqrlmnopqrsmnopqrstnopqrstu";
+	unsigned char test_unchar[strlen(test_char)];
+	memcpy(test_unchar,test_char,strlen(test_char));
+	hash_input(test_unchar,strlen(test_char));
+
+	hash_file.open("hash_file",std::ios::binary);
+	hash_file.read(hash_file_char,65);
+	hash_file.close();
+
+	hash_hex.open("hex3.txt",std::ios::binary);
+	hash_hex.read(hash_to_be,65);
+	hash_hex.close();
+	CHECK(memcmp(hash_file_char,hash_to_be,64)==0);
 }
 
 TEST_CASE("get_infile_length","function test") {
